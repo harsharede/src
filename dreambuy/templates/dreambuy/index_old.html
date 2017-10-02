@@ -1,0 +1,77 @@
+{% extends 'dreambuy/base.html' %}
+
+
+{% block body %}
+
+<div class="index.html container-fluid">
+
+    <!-- Albums -->
+    <div class="wrap">
+        <!--
+        <div class="col-sm-12">
+            <h3>Product's for {{ user.username }}</h3>
+        </div>
+-->
+
+
+
+{% if prdt %}
+    {% for item in prdt %}
+
+       <!-- <li><a href="/dreambuy/{{item.Product_name}}/"> {{item.Product_name}} </a></li> -->
+
+            <div class="cols cols3">
+                <div class="col" style="margin-bottom: 10px; height: 638px;">
+
+    <a>
+        <h4 style="height: 78px;">
+                <a href=/dreambuy/{{item.Product_id}}" title="Click to View in Full Page">{{ item.Product_name }}</a>
+            </h4>
+
+
+    </a>
+
+        <span class="price">MRP : 990.00</span>
+            <img src="{{ item.Product_image }}" class="img-responsive">
+                    
+                        <div class="caption">
+                            <h4 style="height: 78px;">
+                                                        <a href="#" title="Click to View in Full Page">{{ item.Product_name }}</a></h4>
+                            <!-- Albums
+                            <h2>{{ item.Product_name }}</h2>
+                            -->
+                            <h4>Price - &#8377;{{ item.Product_price }} </h4>
+                            <h4>Each bid price - &#8377;{{item.Product_each_bid_cost}}</h4>
+                            <h6>Bids Placed: {{ item.Product_bids }} of {{item.Product_max_bids}} </h6>
+
+                                <div class="wrapper">
+                                    <a href="/dreambuy/{{item.Product_id}} " class="btn btn-primary btn-sm"  role="button">View Details</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+    {% endfor %}
+
+
+{% else %}
+    <h3> you don't have any category's </h3>
+{% endif %}
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+

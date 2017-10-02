@@ -1,0 +1,356 @@
+{% extends 'dreambuy/base.html' %}
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="tumbs">
+
+
+                        {% ifequal prdt.Product_bids prdt.Product_max_bids %}
+                        <h1><small>{{ prdt.Product_name }} </small></h1>
+                        <p><font color="red"> Maximum bid reached, Biding closed for now. </font> </p>
+                    {% else %}
+                         <h1><small>{{ prdt.Product_name }}</small></h1>
+                     {% endifequal %}
+
+                    <a href="/dreambuy/{{prdt.Product_id}}/">
+                        <div class="img-with-text">
+                        {% if prdt.Product_image %}
+                            <img src="{{ prdt.Product_image }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+
+
+                        </div>
+                        </a>
+
+
+                            <div class="imgContainer">
+                            <img src="{{ prdt.Product_image1 }}" class="thumbnail" height="50" width="50">
+                            </div>
+
+                            <div class="imgContainer">
+                            <img src="{{ prdt.Product_image2 }}" class="thumbnail" height="50" width="50">
+                            </div>
+
+                            <div class="imgContainer">
+                            <img src="{{ prdt.Product_image3 }}" class="thumbnail" height="50" width="50">
+                            </div>
+
+                            <div class="imgContainer">
+                            <img src="{{ prdt.Product_image4 }}" class="thumbnail" height="50" width="50">
+                            </div>
+
+                            <div class="imgContainer">
+                            <img src="{{ prdt.Product_image5 }}" class="thumbnail" height="50" width="50">
+                            </div>
+
+                            </div>
+                            </div>
+
+
+
+
+
+                    <div class="details_div">
+
+                    {% ifequal prdt.Product_bids prdt.Product_max_bids %}
+                        <a href=# class="btn btn-warning" style="float: right;"  role="button">Bid</a>
+                    {% else %}
+                         <a href=# class="btn button" style="float: right;"  role="button" onclick='overlay()'>Bid</a>
+                     {% endifequal %}
+
+
+
+
+
+                    <p>by <font size="2" color="blue">{{prdt.Product_brand}}</font></p>
+
+                    <p>M.R.P: <font size="2" ><strong>{{prdt.Product_price}}</strong></font></p>
+
+                    <p>Bids: <font size="2" color="Green"><strong>{{prdt.Product_bids}}</strong></font></p>
+                    <p>Max Bids: <font size="2" color="Red"><strong>{{prdt.Product_max_bids}}</strong></font></p>
+                    <p><strong>Details:</strong> {{ prdt.Product_details }}</p>
+
+            </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+
+
+<div class="overlay overlay div" id="overlay">
+ <div>
+     <a href='#' onclick='overlay()' style="float: right;">[X]</a>
+    {% if prdt.Product_image %}
+        <img src="{{ prdt.Product_image }}" class="img-responsive">
+    {% else %}
+        <h3>No image to display</h3>
+    {% endif %}
+
+    {% ifequal prdt.Product_bids prdt.Product_max_bids %}
+        <h5>Max bids reached, Please try next time.</h5>
+    {% else %}
+         <h3>You can bid now</h3>
+            <p>Please select number of bids you to place.</p>
+
+    {% endifequal %}
+
+
+<form method="POST" action="/dreambuy/bid/{{prdt.Product_id}}">{% csrf_token %}
+<table>
+  <tr>
+      <th style="padding:20px;">
+    <th><span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quote_bids">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span></th>
+    <th>
+
+
+        <input type="text" name="quote_bids" class="form-control input-number" style="width: 50px;" value="1"  min="1" max={{prdt.Product_MAX_bids}} />
+
+
+    </th>
+    <th><span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quote_bids">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+</th>
+
+      <th style="padding:10px;">
+
+      </th>
+
+      <th>
+            <input type="hidden" name="Product_id" value={{prdt.Product_id}}>
+
+          <input class="btn button" style="float: right;"  role="button" onclick='overlay()' type="submit" value="Bid now">
+      </th>
+  </tr>
+
+</table>
+</form>
+
+
+</div>
+</div>
+
+
+
+
+<script>
+function myFunction() {
+    var loadpage = document.getElementById('value').value;
+    alert(loadpage);
+
+}
+
+function overlay() {
+	el = document.getElementById("overlay");
+	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+}
+
+
+//plugin bootstrap minus and plus
+//http://jsfiddle.net/laelitenetwork/puJ6G/
+$('.btn-number').click(function(e){
+    e.preventDefault();
+
+    fieldName = $(this).attr('data-field');
+    type      = $(this).attr('data-type');
+    var input = $("input[name='"+fieldName+"']");
+    var currentVal = parseInt(input.val());
+    if (!isNaN(currentVal)) {
+        if(type == 'minus') {
+
+            if(currentVal > input.attr('min')) {
+                input.val(currentVal - 1).change();
+            }
+            if(parseInt(input.val()) == input.attr('min')) {
+                $(this).attr('disabled', true);
+            }
+
+        } else if(type == 'plus') {
+
+            if(currentVal < input.attr('max')) {
+                input.val(currentVal + 1).change();
+            }
+            if(parseInt(input.val()) == input.attr('max')) {
+                $(this).attr('disabled', true);
+            }
+
+        }
+    } else {
+        input.val(0);
+    }
+});
+$('.input-number').focusin(function(){
+   $(this).data('oldValue', $(this).val());
+});
+$('.input-number').change(function() {
+
+    minValue =  parseInt($(this).attr('min'));
+    maxValue =  parseInt($(this).attr('max'));
+    valueCurrent = parseInt($(this).val());
+
+    name = $(this).attr('name');
+    if(valueCurrent >= minValue) {
+        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the minimum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    if(valueCurrent <= maxValue) {
+        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the maximum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+
+
+});
+$(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) ||
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
+</script>
+
+
+<style>
+.dropdown {
+   display: table-cell;
+    vertical-align: middle;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    vertical-align: middle;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    vertical-align: middle;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+.zoomin img {
+  height: 200px;
+  width: 200px;
+  -webkit-transition: all 2s ease;
+     -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+          transition: all 2s ease;
+}
+.zoomin img:hover {
+  width: 300px;
+  height: 300px;
+}
+
+
+.thumbnail:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:500px;
+    height:auto;x
+    z-index:999;
+    display:inline;
+}
+
+.imgContainer{
+    float:left;
+}
+
+
+.details_div {
+
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+}
+
+
+.tumbs{
+display: inline-block;;
+}
+
+.center{
+width: 10px;
+}
+
+.wrapper {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+
+#outer
+{
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+
+}
+
+td{
+ border: none;
+},
+th {
+
+    text-align: center;
+
+     border: 1px solid #CCC;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+</style>
+
+{% endblock %}

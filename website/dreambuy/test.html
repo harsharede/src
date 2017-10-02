@@ -1,0 +1,1041 @@
+
+
+
+<!DOCTYPE html>
+
+<html class="no-js">
+<head id="Head1"><title>
+	Bidderboy | Best Online Auctions | Daily Deals | Bidding Sites In India| Free Bids
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><meta name="title" content="Bidderboy.com - Online Auctions  – bid or buy branded items – Smart phone, laptop, camera, LED TV, iPod and more up to 99% off" /><meta name="description" content="100% Risk free online auctions at latest bidding site in India, get 5 Free bids to join live auctions of branded mobiles and cool electronic gadgets, Bid or Buy with huge discount up to 99% " /><meta name="keywords" content="bidding, bid auction, bid on, bidding sites, bid site, bid sites india, online bidding, bidding india, online auction sites, auction sites, best bidding sites, bidding sites in india, bidding websites, auctions,auctions india, bid and win, bidding, bid, bids, bid2win, bid to win, bidding sites india, online bidding sites, online shopping, penny auction website, online shopping india, online shopping sites in india" /><link rel="shortcut icon" href="images/favicon.ico" /><link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" /><link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/vendor/venobox.css" /><link rel="stylesheet" href="css/rain.style.css" /><link rel="stylesheet" href="css/responsive.css" /><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .rules li:before
+        {
+            background: none;
+        }
+    </style>
+
+    <script src="//fast.eager.io/G9d_IagyjF.js"></script>
+
+
+    <script src="js/vendor/modernizr-2.8.2.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <script src="Scripts/jquery.signalR-2.2.0.min.js" type="text/javascript"></script>
+    <script src="signalr/hubs" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var bid = $.connection.bidHub;
+
+            bid.client.getRecentBid = function (ProductId, UserName, Price, ts, IsBid, IsPaused) {
+                var encodedUserName = $('<div />').text(UserName).html();
+                var encodedPrice = $('<div />').text(Price).html();
+                var encodedts = $('<div />').text(ts).html();
+                var encodedProductId = $('<div />').text(ProductId).html();
+                var encodedIsPaused = $('<div />').text(IsPaused).html();
+                $('#UserName' + encodedProductId).text(encodedUserName);
+                $('#Price' + encodedProductId).text(encodedPrice);
+                $('#dt' + encodedProductId).text(encodedts);
+                if (IsBid == '1') {
+                    $('#dvzoom' + encodedProductId).addClass('big-animate');
+                }
+
+                var p = encodedts.split(",");
+                var dtnw = new Date(p[0],p[1],p[2],p[3],p[4],p[5],p[6]);
+                var today = new Date();
+                var diffMs = (dtnw - today);
+                var diffts = Math.round(diffMs / 1000) - parseInt(document.getElementById('timespan').value);
+                if (encodedIsPaused == 'True') {
+                    document.getElementById('timer' + encodedProductId).textContent = "Auction Paused";
+                }
+                else if (diffts > 0) {
+
+                    $('#timer' + encodedProductId).backward_timer({
+                        seconds: parseInt(diffts),
+                        on_tick: function (timer) {
+                            $('#dvzoom' + encodedProductId).removeClass('big-animate');
+                            if((timer.seconds_left%2) == 0 && IsBid != '1')
+                            {
+                                ResetTimer(encodedProductId);
+                            };
+                            var color = (timer.seconds_left < 5)
+                                        ? "#F82828"
+                                        : "#3d4d65"
+                            timer.target.css('color', color)
+                        },
+                        on_exhausted: function (timer) {
+                            timer.target.text('Checking...')
+                        }
+                    })
+                    $('#timer' + encodedProductId).backward_timer('start')
+                }
+            };
+
+            bid.client.error1 = function (error) {
+                var encodederror = $('<div />').text(error).html();
+                document.getElementById('popups').style.display = 'block';
+                $('#PopupError').text(encodederror);
+            };
+
+            bid.client.stime = function (sertime) {
+                var encodedsertime = $('<div />').text(sertime).html();
+                var p = encodedsertime.split(",");
+                var serverdt = new Date(p[0], p[1], p[2], p[3], p[4], p[5], p[6]);
+                var diffMs = (serverdt - new Date());
+                var diffSecond = Math.round(diffMs / 1000);
+                document.getElementById('timespan').value = diffSecond;
+            };
+
+            bid.client.reload = function () {
+                location.reload();
+            };
+
+            bid.client.closeProduct = function (productid,htmltext) {
+                var encodedproduct = $('<div />').text(productid).html();
+                document.getElementById('dv'+encodedproduct).remove();
+                document.getElementById("divclos").innerHTML = document.getElementById("divclos").innerHTML + htmltext;
+            };
+
+            bid.client.getUserCredit = function (UserBidCredit, UserId) {
+                var sess = '';
+                if (sess === '') {
+                }
+                else {
+                    var encodedUserBidCredit = $('<div />').text(UserBidCredit).html();
+                    $('#Credit' + UserId).text(encodedUserBidCredit);
+                }
+            };
+
+            $.connection.hub.start().done(function () {
+                bid.server.getstime();
+                var strId = $('.lblId').val();
+                var array = strId.split('~');
+                for (i = 0; i < array.length; i++) {
+                    if (array[i] != '') {
+                        bid.server.getRecentBid(array[i]);
+                    }
+                }
+            });
+        });
+
+            function BidNowClick(ProId) {
+                var bid = $.connection.bidHub;
+                var UserId = '';
+                if (UserId === '') {
+                    document.getElementById('popups').style.display = 'block';
+                    $('#PopupError').text('Login to bid.');
+                }
+                else {
+                    var myip = '115.98.212.31';
+                    bid.server.bidNow(ProId, UserId, myip);
+                }
+            };
+
+            function HidePopup() {
+                document.getElementById('popups').style.display = 'none';
+            };
+
+            function ResetTimer(ProId) {
+                var p = document.getElementById('dt' + ProId).textContent.split(",");
+                var dtnw = new Date(p[0],p[1],p[2],p[3],p[4],p[5],p[6]);
+                var today = new Date();
+                var diffMs = (dtnw - today);
+                var diffts = Math.round(diffMs / 1000) - parseInt(document.getElementById('timespan').value);
+
+                if (diffts > 0) {
+
+                    $('#timer' + ProId).backward_timer({
+                        seconds: parseInt(diffts),
+                        on_tick: function (timer) {
+                            $('#dvzoom' + ProId).removeClass('big-animate');
+                            if((timer.seconds_left%2) == 0)
+                            {
+                                ResetTimer(ProId);
+                            };
+                            var color = (timer.seconds_left < 5)
+                                        ? "#F82828"
+                                        : "#3d4d65"
+                            timer.target.css('color', color)
+                        },
+                        on_exhausted: function (timer) {
+                            timer.target.text('Checking...')
+                        }
+                    })
+                    $('#timer' + ProId).backward_timer('start')
+                }
+
+            };
+
+            function skm_LockScreen() {
+                var lock = document.getElementById('skm_LockPane');
+                if (lock)
+                    lock.className = 'LockOn';
+
+                lock.innerHTML = '<img id=Img1 src=images/Bidderboy_FullScreen.png alt=Loading... align=center class="spin" />';
+            }
+    </script>
+
+</head>
+
+<body class="home">
+    <div id="wrapper">
+        <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZCu3ZnQZ3vz6E5CTUTYM-9ZyeikZB4tMCkg2ZAskA4MujhE34BfHPjOGR-eXJnAWKw2&amp;t=636354727360000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQupKDyGBJR4RcHJNYll_F6CaJSke-pV_8aHneV2k925W1Nn_OKxX52GLZ6jVYXB2S5fS6amLLrj3XtxdTSEDiL7HeOuswk9jMtVKkLufU3bM9sKCAIPOQ-9eUEN1TSlOkdHbSxaguBAVJPOXkFP6BTc1&amp;t=3d6efc1f" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=JnUc-DEDOM5KzzVKtsL1tQgc4V23-TIxB8PbqZZ85cm2mAOhrfioXXkV8Rhcnxu9Sof6vmPAQ-Fk05x8q1l5JIuWvU-Ekb5OyYYzSzwvlXDVOqnDijAYgfEZcW_f1yl-UpYNi-S7u8xyjA8Gy9kIVG0feUNg69T5zBuQTNfDVeW-V5qPxho1AKYkCf7f8pVg0&amp;t=3d6efc1f" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Q/1coOs22oWwe0Dftuvoh836RUOb4rgzKviMcpcsZ3/UyHQYOVml4VeB/KDyudl1+wa0VszjwbUCm5/JRbdyS/C04G2zIqWnhJbuPn1CSXs9F/rPiaxOZ4Z/H5rFtjoz5CozIMX3nuHd5xlxCyxor/+ty4X3fbKTOyqaBWhlbekb7sCKG3dKsE8qUw8oa9EMB/oc/EX0G0b0lztFnWsq+KepN38aAjpa3PIp6LfYJshoV+MELwNO3pDxCe6ZB1+7NhsK5GM+91zCCJQLpAi1QSBFD9n9piyn4iojyjNB+oyjxv1fgF524O0ARzxRjJ0LqTXo0O5/5g+j2aQQIUJsgCB0ScRU/bCZ1IcNuXWVetEeT26aQTG/QLOKForZFI72+ZNBkHo03gtr7McbQyT7Fiws67yVdcIufYtkjBc7YDqnYSM4quACo118bSgNws6QpzudYNu0j7CwoXjoRapjNmQTsWEhne8WHh+gChWVI/yLZShWD4lAD2KRKc25zvhLe+G6mOpnUNChhHv4ruPlixTpczCYGZlMIqnWsuAO4IJDjvH+MYastW5XF8xINn6dccJuNHlSIE0338vjrcLUgPe28hVjpWMfiohn2yLAQ7cN001C/YrrpYT40AQA5jmoJjneB+KpBXj3hqmqvLVD/f8ewDhtQFu3NB/za3A1q7A=" />
+</div>
+            <input name="timespan" type="text" readonly="readonly" id="timespan" style="display: none;" />
+
+            <header id="header">
+                <div class="header-top">
+                    <div class="wrap">
+                        <a href="Default" id="logo" title="Bidderboy">
+                            <img src="images/logo.jpg" alt="Bidderboy"></a>
+                        <div class="user-login">
+                            <div id="Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnLogin&#39;)">
+
+                                <span id="lblLError" style="color: #F70A00;"></span>
+                                <ul class="formlist">
+                                    <li>
+                                        <input name="txtLUserName" type="text" id="txtLUserName" class="textbox" placeholder="Username or Email" />
+                                        <label class="forgot-passsword">
+                                            <input id="chkRememberMe" type="checkbox" name="chkRememberMe" />Remember Me</label>
+                                    </li>
+                                    <li>
+                                        <input name="txtLPassword" type="password" id="txtLPassword" class="textbox" placeholder="Password" />
+                                        <a href="ForgetPassword" class="forgot-passsword">Forgot password? Click Here</a>
+                                    </li>
+                                    <li class="actions">
+                                        <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="login-button" />
+                                        <span class="or">Or</span>
+                                        <input type="submit" name="FbLogin" value="Facebook Login" id="FbLogin" class="fb-login" />
+                                    </li>
+                                </ul>
+
+</div>
+                        </div>
+                        <!--/.user-login-->
+                    </div>
+                    <!--/.wrap-->
+                </div>
+                <!--/.header-top-->
+            </header>
+            <!--/#header-->
+
+            <div class="main-banner">
+                <div class="wrap">
+                    <div class="banner-content">
+                        <div class="infographic">
+                            <figure>
+                                <img src="images/infographic.png" alt="Bidderboy">
+                            </figure>
+                        </div>
+                        <!--/.infographic-->
+                        <figure class="women-image">
+                            <img src="images/women.png" alt="Bidderboy">
+                        </figure>
+                        <!--/.women-image-->
+                        <div class="win-big">
+                            Win <span>Big</span>
+                        </div>
+                        <!--/.win-big-->
+                        <div class="discount">
+                            <span>Why pay retail prices?</span>
+                            Up to 89% Discounts Guarantee !
+                        </div>
+                        <!--/.discount-->
+                    </div>
+                    <!--/.banner-content-->
+
+                    <div class="signup-form">
+                        <h2>Free Sign Up</h2>
+                        <span> Sign-up takes less than 30 seconds. Get 5 Free Credits on Joining. </span>
+
+                        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl15', 'form1', ['tUpdatePanel1','UpdatePanel1','tUpdatePanel2','UpdatePanel2','trptrLiveProduct$ctl00$ctl00','rptrLiveProduct_ctl00_0','trptrLiveProduct$ctl01$ctl00','rptrLiveProduct_ctl00_1','trptrLiveProduct$ctl02$ctl00','rptrLiveProduct_ctl00_2'], [], [], 90, '');
+//]]>
+</script>
+
+                        <div id="UpdatePanel1">
+
+                                <div id="skm_LockPane" class="LockOff">
+                                </div>
+
+                                <ul class="formlist">
+
+                                    <li class="fields">
+
+                                        <div class="input-box">
+                                            <input name="txtFirstName" type="text" id="txtFirstName" class="textbox" placeholder="First Name" />
+                                        </div>
+                                        <div class="input-box">
+                                            <input name="txtLastName" type="text" id="txtLastName" class="textbox" placeholder="Last Name" />
+                                        </div>
+                                    </li>
+                                    <li class="fields">
+                                        <div class="input-box">
+                                            <input name="txtSUserName" type="text" id="txtSUserName" class="textbox" placeholder="Choose Username" />
+                                        </div>
+                                        <div class="input-box">
+                                            <input name="txtSPassword" type="password" id="txtSPassword" class="textbox" placeholder="Choose Password" />
+                                        </div>
+                                    </li>
+                                    <li class="fields">
+                                        <div class="input-box">
+                                            <input name="txtEmail" type="text" id="txtEmail" class="textbox" placeholder="Email ID" />
+                                        </div>
+                                        <div class="input-box">
+                                            <input name="txtMobile" type="text" maxlength="10" id="txtMobile" class="textbox" placeholder="Mobile" />
+                                        </div>
+                                    </li>
+                                    <li class="terms">
+                                        <label>
+                                            <input id="chkChecked" type="checkbox" name="chkChecked" />
+                                            I accept the <a href="Terms">Terms and Conditions</a> and the <a href="Privacy">Privacy Policy</a> of Bidderboy.com
+                                        </label>
+                                    </li>
+                                    <li class="actions">
+                                        <input type="submit" name="btnSignUP" value="Sign Up" onclick="skm_LockScreen();" id="btnSignUP" class="button btn-sm btn-login" />
+                                        <span class="or">Or</span>
+                                        <input type="submit" name="btnFBSignup" value="SIGN UP with Facebook" onclick="skm_LockScreen();" id="btnFBSignup" class="fb-login" />
+                                    </li>
+                                </ul>
+
+</div>
+
+                    </div>
+                    <!--/.signup-form-->
+
+
+                </div>
+            </div>
+            <!--/.main-banner-->
+
+            <div id="main">
+                <div id="primary" class="content-area one-column">
+                    <div id="content" class="site-content">
+                        <div class="welcome-section">
+                            <div class="wrap">
+                                <h1>India's No#1 Discount Auction Bidding Platform  </h1>
+                                <p>
+                                    100% RISKFREE ONLINE AUCTIONS, WIN or BUY BRANDED NEW PRODUCTS AT UP TO 89% HUGE DISCOUNT
+                                    <br />
+                                    5 Free Credits On Sign Up, Worldwide Shipping , Latest Gadgets, Click To BID Easy Auctions<br />
+                                    40000+ Members , 10000+ Completed Auctions , Always Fair Auction Guaranteed.
+                                </p>
+                                <a href="#" class="button btn-login">Join Now</a>
+                            </div>
+                        </div>
+                        <!--/.welcome-section-->
+                        <div class="video-section">
+                            <div class="wrap">
+                                <div class="introduction-video cf">
+                                    <div class="video-contain">
+                                        <div class="offer">
+                                            <span><em><i class="fa fa-check"></i>&nbsp;Only Brand New Products
+                                            <br>
+                                                <i class="fa fa-check"></i>&nbsp;No Auction Reserve Price
+                                            <br>
+                                                <i class="fa fa-check"></i>&nbsp;Free of Charge Returns
+                                                <br>
+                                                <i class="fa fa-check"></i>&nbsp;Buy-Now Discounts Assured<br>
+                                                <i class="fa fa-check"></i>&nbsp;Safe Payment Gateways</em>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="youtube-video">
+                                        <figure>
+                                            <a class="venoboxvid" data-gall="gall-video" data-type="youtube" href="https://youtu.be/YmSOiYA3ksw" title="">
+                                                <img src="images/video.jpg" alt="Youtube Video"></a>
+                                        </figure>
+                                    </div>
+                                    <!--/.video-->
+                                </div>
+                                <!--/.introduction-video-->
+                            </div>
+                        </div>
+                        <!--/.video-section-->
+                        <div class="bidding-options">
+                            <div class="wrap">
+                                <div class="mobile-group">
+                                    <figure>
+                                        <img src="images/mobile-group.png" alt="Bidderboy.com">
+                                    </figure>
+                                </div>
+                                <!--/.mobile-group-->
+                                <div class="bid-on cf">
+                                    <div class="bid-title">
+                                        <h4><span>Bid On</span></h4>
+                                    </div>
+                                    <!--/.bid-title-->
+                                    <div class="bid-features">
+                                        <ul>
+                                            <li>
+                                                <span>Warehouse Products</span>
+                                                <span>Warehouse Closeouts</span>
+                                            </li>
+                                            <li>
+                                                <span>Overstock Surplus</span>
+                                                <span>Wholesale Stock</span>
+                                            </li>
+                                            <li>
+                                                <span>Manufacturer Stock</span>
+                                                <span>And More</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/.bid-features-->
+                                </div>
+                                <!--/.bid-on-->
+                            </div>
+                        </div>
+                        <!--/.bidding-options-->
+
+                        <input name="lblId" type="text" value="13684~13657~13685" readonly="readonly" id="lblId" class="lblId" style="display: none;" />
+                        <div class="live-auctions auction-section" style="background: none; border-bottom: none;">
+                            <div class="wrap">
+                                <div class="heading heading-v1">
+                                    <h3>Live Auctions</h3>
+                                </div>
+                                <div class="cols cols3">
+
+                                            <div class="col" id='dv13684' style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=x/hCgvQ2ctIPoocH2bOEog=="  title="Click to View in Full Page">Transcend JetFlash 340 OTG 16 GB Pendrive</a></h4>
+                                                    <span class="price">MRP : 990.00</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=x/hCgvQ2ctIPoocH2bOEog==" title="Click to View in Full Page"><img src="images/Product/201512221823_transcend-jetflash-340-otg-Pen-drive.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Transcend JetFlash 340 OTG 16 GB Pendrive"  /></a>
+                                                    </figure>
+                                                    <div class="bid-credit-row">
+                                                        <span class="auction-id">Auction ID. BB13684</span>
+                                                        <a class="bid-credit" title="Number of Require Credits Per BID">3x</a>
+                                                    </div>
+                                                    <!--/.bid-credit-row-->
+                                                    <div class="bid-row cf">
+                                                        <span class="bid-price">&#8377;
+                                                                             <label id='Price13684'></label>
+                                                        </span>
+                                                        <div class="bid-status">
+                                                            <div id='dvzoom13684' class='big-animate'>
+                                                                <span id='timer13684' class='timer' data-transition="customZoomTrans2">Checking...</span>
+                                                            </div>
+                                                            <span class="bidder-name">
+                                                                <label id='UserName13684'></label>
+                                                                <label id='dt13684' style="display:none;"></label>
+                                                            </span>
+                                                        </div>
+                                                        <!--/.bid-status-->
+                                                    </div>
+                                                    <div class="bid-option-row">
+                                                        <span class="bid-buttons">
+                                                            <div id="rptrLiveProduct_ctl00_0">
+
+                                                                    <a id="rptrLiveProduct_lnkCart_0" title="Add to cart" class="cart bid-btn" href="javascript:__doPostBack(&#39;rptrLiveProduct$ctl00$lnkCart&#39;,&#39;&#39;)"></a>
+                                                                    <a id="rptrLiveProduct_lnkAutoBid_0" title="Set AUTOBID" class="bid bid-btn" href="javascript:__doPostBack(&#39;rptrLiveProduct$ctl00$lnkAutoBid&#39;,&#39;&#39;)">A</a>
+
+</div>
+                                                        </span>
+                                                        <span class="bid-now-button">
+                                                            <input type="button" id='BidNow' onclick="BidNowClick('13684    ')" value="BID NOW" class="button btn-lg bid-now"  title="Click to Place BID"/>
+                                                        </span>
+                                                    </div>
+                                                    <!--/.bid-option-row-->
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+
+                                            <div class="col" id='dv13657' style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=ETMhkYmI87/VTZLKtU5gZA=="  title="Click to View in Full Page">Nikon D3200  DSLR Camera</a></h4>
+                                                    <span class="price">MRP : 34999.00</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=ETMhkYmI87/VTZLKtU5gZA==" title="Click to View in Full Page"><img src="images/Product/201631618307_nikon-d3200-dslr-camera.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Nikon D3200  DSLR Camera"  /></a>
+                                                    </figure>
+                                                    <div class="bid-credit-row">
+                                                        <span class="auction-id">Auction ID. BB13657</span>
+                                                        <a class="bid-credit" title="Number of Require Credits Per BID">12x</a>
+                                                    </div>
+                                                    <!--/.bid-credit-row-->
+                                                    <div class="bid-row cf">
+                                                        <span class="bid-price">&#8377;
+                                                                             <label id='Price13657'></label>
+                                                        </span>
+                                                        <div class="bid-status">
+                                                            <div id='dvzoom13657' class='big-animate'>
+                                                                <span id='timer13657' class='timer' data-transition="customZoomTrans2">Checking...</span>
+                                                            </div>
+                                                            <span class="bidder-name">
+                                                                <label id='UserName13657'></label>
+                                                                <label id='dt13657' style="display:none;"></label>
+                                                            </span>
+                                                        </div>
+                                                        <!--/.bid-status-->
+                                                    </div>
+                                                    <div class="bid-option-row">
+                                                        <span class="bid-buttons">
+                                                            <div id="rptrLiveProduct_ctl00_1">
+
+                                                                    <a id="rptrLiveProduct_lnkCart_1" title="Add to cart" class="cart bid-btn" href="javascript:__doPostBack(&#39;rptrLiveProduct$ctl01$lnkCart&#39;,&#39;&#39;)"></a>
+                                                                    <a id="rptrLiveProduct_lnkAutoBid_1" title="Set AUTOBID" class="bid bid-btn" href="javascript:__doPostBack(&#39;rptrLiveProduct$ctl01$lnkAutoBid&#39;,&#39;&#39;)">A</a>
+
+</div>
+                                                        </span>
+                                                        <span class="bid-now-button">
+                                                            <input type="button" id='BidNow' onclick="BidNowClick('13657    ')" value="BID NOW" class="button btn-lg bid-now"  title="Click to Place BID"/>
+                                                        </span>
+                                                    </div>
+                                                    <!--/.bid-option-row-->
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+
+                                            <div class="col" id='dv13685' style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=GmVca/Dvsqcdi27DOzqohw=="  title="Click to View in Full Page">100 Bidderboy Credits</a></h4>
+                                                    <span class="price">MRP : 999.00</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=GmVca/Dvsqcdi27DOzqohw==" title="Click to View in Full Page"><img src="images/Product/20174819177_1000.jpg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="100 Bidderboy Credits"  /></a>
+                                                    </figure>
+                                                    <div class="bid-credit-row">
+                                                        <span class="auction-id">Auction ID. BB13685</span>
+                                                        <a class="bid-credit" title="Number of Require Credits Per BID">3x</a>
+                                                    </div>
+                                                    <!--/.bid-credit-row-->
+                                                    <div class="bid-row cf">
+                                                        <span class="bid-price">&#8377;
+                                                                             <label id='Price13685'></label>
+                                                        </span>
+                                                        <div class="bid-status">
+                                                            <div id='dvzoom13685' class='big-animate'>
+                                                                <span id='timer13685' class='timer' data-transition="customZoomTrans2">Checking...</span>
+                                                            </div>
+                                                            <span class="bidder-name">
+                                                                <label id='UserName13685'></label>
+                                                                <label id='dt13685' style="display:none;"></label>
+                                                            </span>
+                                                        </div>
+                                                        <!--/.bid-status-->
+                                                    </div>
+                                                    <div class="bid-option-row">
+                                                        <span class="bid-buttons">
+                                                            <div id="rptrLiveProduct_ctl00_2">
+
+                                                                    <a id="rptrLiveProduct_lnkCart_2" title="Buy Now Not Available" class="aspNetDisabled cart bid-btn" style="background:rgba(255, 153, 72, 0.43) url(../images/bgi/buy-button.png) no-repeat 0 0;cursor:pointer;"></a>
+                                                                    <a id="rptrLiveProduct_lnkAutoBid_2" title="Set AUTOBID" class="bid bid-btn" href="javascript:__doPostBack(&#39;rptrLiveProduct$ctl02$lnkAutoBid&#39;,&#39;&#39;)">A</a>
+
+</div>
+                                                        </span>
+                                                        <span class="bid-now-button">
+                                                            <input type="button" id='BidNow' onclick="BidNowClick('13685    ')" value="BID NOW" class="button btn-lg bid-now"  title="Click to Place BID"/>
+                                                        </span>
+                                                    </div>
+                                                    <!--/.bid-option-row-->
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--/.live-auctions-->
+                        <div class="upcoming-auctions auction-section">
+                            <div class="wrap">
+                                <div class="heading heading-v1">
+                                    <h3>Upcoming Auctions</h3>
+                                </div>
+                                <div class="cols cols4">
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=+9LuL9XZlffK9zMVFMm44A=="  title="Click to View in Full Page">Transcend TS8GMP710K 8GB MP3 Player</a></h4>
+                                                    <span class="price">MRP : 4150.00</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=+9LuL9XZlffK9zMVFMm44A==" title="Click to View in Full Page"><img src="images/Product/201611519296_transcend-mp710-MP3-Player.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Transcend TS8GMP710K 8GB MP3 Player"  /></a>
+                                                    </figure>
+
+                                                    <div class="bid-action">
+                                                        <span id="rptrUpcomingProduct_lblTime_0">Open After 12 Hours</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=N8FJn5aCJPJbPsz/CFWD6g=="  title="Click to View in Full Page">Apple iPhone 7 Jet Black 128 GB</a></h4>
+                                                    <span class="price">MRP : 70000.00</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=N8FJn5aCJPJbPsz/CFWD6g==" title="Click to View in Full Page"><img src="images/Product/2017316184058_apple-iphone-7-128Gb-jet-black-auction-win-india.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Apple iPhone 7 Jet Black 128 GB"  /></a>
+                                                    </figure>
+
+                                                    <div class="bid-action">
+                                                        <span id="rptrUpcomingProduct_lblTime_1">Open After 2 days</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=cpA5m79vMUrxKzsPSS2AGA=="  title="Click to View in Full Page">Honda Activa 4G</a></h4>
+                                                    <span class="price">MRP : 55069.00</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=cpA5m79vMUrxKzsPSS2AGA==" title="Click to View in Full Page"><img src="images/Product/2017324195523_honda-activa-4g.jpg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Honda Activa 4G"  /></a>
+                                                    </figure>
+
+                                                    <div class="bid-action">
+                                                        <span id="rptrUpcomingProduct_lblTime_2">Open After 9 days</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=K0HjwjIq0YcNiX5IL+gXEg=="  title="Click to View in Full Page">Samsung Galaxy S8 64GB</a></h4>
+                                                    <span class="price">MRP : 59900.00</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=K0HjwjIq0YcNiX5IL+gXEg==" title="Click to View in Full Page"><img src="images/Product/2017616172859_samsung-galaxy-s8-plus.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Samsung Galaxy S8 64GB"  /></a>
+                                                    </figure>
+
+                                                    <div class="bid-action">
+                                                        <span id="rptrUpcomingProduct_lblTime_3">Open After 16 days</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--/.upcoming-auctions-->
+                        <div class="closed-auctions auction-section">
+                            <div class="wrap">
+                                <div class="heading heading-v1">
+                                    <h3 style="border-top: none;">Closed Auctions</h3>
+                                </div>
+                                <div class="cols cols4">
+                                    <div id="divclos"></div>
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=1GOV2B8pf8fuRxKqQveQRw=="  title="Click to View in Full Page">Fastrack 3124SM01 Analog Watch - For Men</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13683</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=1GOV2B8pf8fuRxKqQveQRw==" title="Click to View in Full Page"><img src="images/Product/2017531164648_3124sm01-fastrack.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Fastrack 3124SM01 Analog Watch - For Men"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_0">greeshma</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_0">11.60</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_0" class="button buy-now" title="Add to Cart" href="javascript:__doPostBack(&#39;rptrClosedProduct$ctl00$lnkCart&#39;,&#39;&#39;)">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=k6kTA6pUV5OalXz648G0SA=="  title="Click to View in Full Page">135 Bidderboy Credits</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13681</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=k6kTA6pUV5OalXz648G0SA==" title="Click to View in Full Page"><img src="images/Product/2016121154629_135.jpg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="135 Bidderboy Credits"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_1">Ankit88488</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_1">5.35</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_1" title="Buy Now Not Available" class="aspNetDisabled button buy-now" title="Add to Cart" style="background:rgba(255, 153, 72, 0.43) url(../images/bgi/buy-button.png) no-repeat 0 0;cursor:pointer;">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=CqIMCFlX9DrhC2LUtmq6Fg=="  title="Click to View in Full Page">Apple iPhone 6 Silver 16GB</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13679</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=CqIMCFlX9DrhC2LUtmq6Fg==" title="Click to View in Full Page"><img src="images/Product/1415183468_apple-iphone-6-win-online-india.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Apple iPhone 6 Silver 16GB"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_2">amanshetty</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_2">85.25</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_2" class="button buy-now" title="Add to Cart" href="javascript:__doPostBack(&#39;rptrClosedProduct$ctl02$lnkCart&#39;,&#39;&#39;)">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=l0RsMRMCwTsmslFHfmba8g=="  title="Click to View in Full Page">SanDisk Ultra 32 GB MicroSDHC Class 10 Memory Card</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13680</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=l0RsMRMCwTsmslFHfmba8g==" title="Click to View in Full Page"><img src="images/Product/20151222181437_sandisk-Ultra-32-GB-Class-10-Memory-Card.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="SanDisk Ultra 32 GB MicroSDHC Class 10 Memory Card"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_3">valaypatel</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_3">6.40</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_3" class="button buy-now" title="Add to Cart" href="javascript:__doPostBack(&#39;rptrClosedProduct$ctl03$lnkCart&#39;,&#39;&#39;)">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=5t9fBp5eNQAf65hE+6HObg=="  title="Click to View in Full Page">Flipkart Gift Voucher Rs.1000</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13678</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=5t9fBp5eNQAf65hE+6HObg==" title="Click to View in Full Page"><img src="images/Product/201626133438_Flipkart-Gift-Voucher-1000-rupees.png " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Flipkart Gift Voucher Rs.1000"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_4">chinu8009</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_4">11.70</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_4" class="button buy-now" title="Add to Cart" href="javascript:__doPostBack(&#39;rptrClosedProduct$ctl04$lnkCart&#39;,&#39;&#39;)">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=4QkHlQoB8KE/oCp6t5l7OA=="  title="Click to View in Full Page">Fossil CH2924 Brigg's Collection Analog Watch - For Men</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13676</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=4QkHlQoB8KE/oCp6t5l7OA==" title="Click to View in Full Page"><img src="images/Product/20151218131053_ch2924-fossil-premium-watch-for-men.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Fossil CH2924 Brigg's Collection Analog Watch - For Men"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_5">Abhiroop</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_5">30.60</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_5" class="button buy-now" title="Add to Cart" href="javascript:__doPostBack(&#39;rptrClosedProduct$ctl05$lnkCart&#39;,&#39;&#39;)">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=3WAUAkleNP963P3vrjU2hg=="  title="Click to View in Full Page">65 Bidderboy Credits</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13677</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=3WAUAkleNP963P3vrjU2hg==" title="Click to View in Full Page"><img src="images/Product/1379325566_65.jpg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="65 Bidderboy Credits"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_6">Varun46</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_6">0.83</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_6" title="Buy Now Not Available" class="aspNetDisabled button buy-now" title="Add to Cart" style="background:rgba(255, 153, 72, 0.43) url(../images/bgi/buy-button.png) no-repeat 0 0;cursor:pointer;">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+                                            <div class="col" style="margin-bottom: 10px;">
+                                                <div class="auction-block">
+                                                    <h4>
+                                                        <a href="ProductDetail?id=dNo++KkGYmGq37sC+O92Ng=="  title="Click to View in Full Page">Kaspersky Antivirus 2017 1 Pc 3Year</a></h4>
+                                                    <span class="auction-id">Auction ID: BB13675</span>
+                                                    <figure class="product-image">
+                                                        <a href="ProductDetail?id=dNo++KkGYmGq37sC+O92Ng==" title="Click to View in Full Page"><img src="images/Product/2017891808_kaspersky-antivirus-software-2017-1pc-3year.jpeg " style="max-width: 220px;width: auto;max-height: 245px; height: auto;" alt="Kaspersky Antivirus 2017 1 Pc 3Year"  /></a>
+                                                    </figure>
+                                                    <div class="auction-status-row">
+                                                        <span class="auction-status">Closed</span>
+                                                        <span class="auction-winner">
+                                                            <span id="rptrClosedProduct_lblUserName_7">Blueeye</span></span>
+                                                    </div>
+                                                    <!--/.auction-status-row-->
+                                                    <div class="bid-action bid-end-price">
+                                                        Ended &#8377;
+                                                                        <span id="rptrClosedProduct_lblPrice_7">12.80</span>
+                                                    </div>
+                                                    <!--/.bid-action-->
+                                                    <div class="bid-option-row">
+
+                                                        <a id="rptrClosedProduct_lnkCart_7" class="button buy-now" title="Add to Cart" href="javascript:__doPostBack(&#39;rptrClosedProduct$ctl07$lnkCart&#39;,&#39;&#39;)">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                                <!--/.auction-block-->
+                                            </div>
+                                            <!--/.col-->
+
+
+                                </div>
+                                <a href="AllAuctionView?Type=Closed" Class="pull-right btn" Style="background:#ff9948;color: white;font-weight: bold;">VIEW ALL</a>
+                            </div>
+                        </div>
+                        <!--/.closed-auctions-->
+
+
+                        <!--/.service-box-->
+                        <div class="instruction-box">
+                            <div class="wrap">
+                                <div class="cols cols2">
+                                    <div class="col">
+                                        <h5><span>Bidderboy's Online Auction Rules</span></h5>
+                                        <ul class="rules">
+                                            <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;One User Account Per Person / IP Address / House is allowed</li>
+                                            <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Group Bidding is strictly not allowed  </li>
+                                            <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Do not use any 3rd party bidding softwares of bots for bidding </li>
+                                            <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Misleading USER IDs are not allowed - Please don't try your tricks</li>
+                                            <li style="padding: 0px;"><i class="fa fa-caret-right" style="font-size: 20px;"></i>&nbsp;&nbsp;Violation of rules will result in Suspension of your account</li>
+                                        </ul>
+                                        <!--/.rules-->
+                                    </div>
+                                    <!--/.col-->
+                                    <div class="col">
+                                        <h5><span>Secure &amp; Protected Online Shopping</span></h5>
+                                        <p>Bidderboy.com is secured by Starfield Technologie's 256 bit SSL encryption. Your privacy is highly protected. We process payments using RBI Approved Payment Gateway - CCAvenue  & PayPal's Secured International Payment Gateway.</p>
+                                        <div class="logos">
+                                            <figure>
+                                                <img src="images/paypal-logo.jpg" alt="Bidderboy">
+                                            </figure>
+                                            <figure>
+                                                <span id="siteseal">
+                                                    <script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=4DKFRsOpvXPKhy9M1HllJgSdHD9Y56Y0CIT4ppAfJmCgkPu2h8nk"></script>
+                                                </span>
+                                            </figure>
+                                        </div>
+                                        <!--/.logos-->
+                                    </div>
+                                    <!--/.col-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/#content-->
+                </div>
+                <!--/#primary-->
+            </div>
+            <!--/#main -->
+
+            <footer id="footer">
+                <div class="footer-top">
+                    <div class="wrap">
+                        <div class="boy-thumb">
+                            <figure>
+                                <img src="images/boy-thumb.jpg" alt="Bidderboy">
+                            </figure>
+                        </div>
+                        <!--/.boy-thumb-->
+                         <nav class="fmenu">
+                            <ul>
+                                <li><a href="Terms" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                                <li><a href="HotProducts" title="Responsible Bidding">Hot Products</a></li>
+                                <li><a href="Legal" title="Legal Terms of use">Legal Terms of use</a></li>
+                                <li><a href="Privacy" title="Privacy">Privacy</a></li>
+                                <li><a href="Partnership" title="Partnerships">Partnerships</a></li>
+                                <li><a href="Careers" title="Careers">Careers</a></li>
+                                <li><a href="Winning-Tips" title="Winning Tips">Winning Tips</a></li>
+
+                            </ul>
+                        </nav>
+                        <!--/.fmenu-->
+                        <nav class="fmenu">
+                            <ul>
+                                <li><a href="responsible-bidding" title="Responsible Bidding">Responsible Bidding</a></li>
+                                <li><a href="How-it-works" title="How it works">How it works</a></li>
+                                <li><a href="FAQs" title="FAQs">FAQs</a></li>
+                                <li><a href="Referal-Program" title="Referal Program">Referal Program</a></li>
+                                <li><a href="About-us" title="About Us">About Us</a></li>
+                                <li><a href="Contact-us" title="Contact Us">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <ul class="social">
+                            <li><a href="http://www.facebook.com/bidderboy" class="fb" title="Facebook" target="_blank">Facebook</a></li>
+                            <li><a href="http://twitter.com/bidderboy_india" class="tw" title="Twitter" target="_blank">Twitter</a></li>
+                            <li><a href="https://google.com/+Bidderboy" class="gp" title="Google Plus" target="_blank">Google Plus</a></li>
+                            <li><a href="http://in.linkedin.com/in/bidderboy" class="in" title="Linked In" target="_blank">Linked In</a></li>
+                        </ul>
+                        <!--/.social-->
+                    </div>
+                </div>
+                <!--/.footer-top-->
+                <div class="copyright-section">
+                    <div class="wrap">
+                        <div class="copyright">Copyright 2011 - 2017 <a href="https://www.bidderboy.com">Bidderboy Corporation</a>. All rights reserved.</div>
+                        <!--/.copyright-->
+
+
+                    </div>
+                </div>
+                <!--/.copyright-section-->
+            </footer>
+            <!--/.footer-->
+
+
+            <div id="UpdatePanel2">
+
+                    <div id="popups" class="modal fade in" style="display:none;background-color:black;opacity:0.9;text-transform:uppercase;">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <h5 class="text-center">
+                                        <label id="PopupError">
+                                            <span id="ltrPopUpError" style="text-transform: uppercase;">Error</span></label>
+                                    </h5>
+                                    <div class="text-center">
+                                        <a id="A2" onclick="HidePopup()" class="button bid-now" style="cursor: pointer">OK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+</div>
+
+
+        </form>
+
+    </div>
+
+
+    <script src="js/vendor/jquery.ezmark.min.js"></script>
+    <script type="text/javascript" src="js/vendor/venobox.js"></script>
+    <script src="js/vendor/jquery.matchHeight.js"></script>
+    <script src="js/general.js"></script>
+
+    <script type="text/javascript" src="Scripts/jquery-backward-timer.min.js"></script>
+    <script>(function(i,s,o,g,r,a,m){    i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){        (i[r].q=i[r].q||[]).push(arguments)    },i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-32177004-1', 'auto');ga('send', 'pageview');</script>
+
+</body>
+</html>

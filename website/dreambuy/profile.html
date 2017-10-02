@@ -1,0 +1,57 @@
+{% extends 'dreambuy/base.html' %}
+
+
+{% block body %}
+
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F5F3;
+}
+tr:nth-child(odd) {
+    background-color: #D0D3D2;
+}
+</style>
+<div class="albums-container container-fluid">
+<h1> Bids by you. </h1>
+
+<table>
+    <tr>
+        <th>Product_id</th>
+    <th>Bid_count</th>
+    <th>Bid_time</th>
+  </tr>
+{% for row in user_bids_list %}
+  <tr>
+    <th>{{row.Product_name}}</th>
+    <th>{{row.bid_count}}</th>
+    <th>{{row.bid_time}}</th>
+  </tr>
+
+{% endfor %}
+    </table>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+

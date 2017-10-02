@@ -1,0 +1,14 @@
+{% extends 'dreambuy/base.html' %}
+{% block body %}
+<div class="container">
+	<div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+        <br><br> <h2 style="color:#0fad00">Payment Success</h2>
+        <p style="font-size:20px;color:#5C5C5C;">Thank you for placing bid. We have sent you an email with details
+Please go to your email now and verify.</p>
+        <a href="{% url 'dreambuy:index' %}" class="btn btn-success">     Home      </a>
+    <br><br>
+        </div>
+	</div>
+</div>
+{% endblock %}
