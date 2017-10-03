@@ -42,9 +42,16 @@ def get_Product_list(request):
 
 def index(request):
     prdt = Product.objects.all().order_by('Product_bid_percent').reverse()
+    user = request.user
+    print (user)
+    if user != None:
+        try:
+            usrbids = userbids.objects.get(user=user).order_by('bid_time').reverse()
+        except Exception as e:
+            usrbids = e
     updateMAX_bid()
     updaterank()
-    context = {'prdt': prdt}
+    context = {'prdt': prdt,'usrbids': usrbids}
     return render(request, "dreambuy/index.html", context)
 
 def FAQs(request):
@@ -115,7 +122,7 @@ def place_bid(request, prdt_id):
                 cur_prdt.save()
                 amt = int(cur_palced)* cur_prdt_bid_price
                 purpose = str(prdt_id)+'_'+str(cur_palced)+'_'+str(cur_prdt_bid_price)
-                rurl = 'http://34.230.248.248:8000/dreambuy/pymnt/'
+                rurl = 'http://www.iwishh.in/dreambuy/pymnt/'
                 response = mk_pymt(amt=10, purpose=purpose, usr='test1', mblnum='', mlid='', rurl=rurl)
                 # print (response)
                 pymntpth = response['payment_request']['longurl']

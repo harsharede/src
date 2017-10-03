@@ -68,10 +68,11 @@ class Product(models.Model):
     #
     # Product_max_bids = 10
     #
-    # # def _bids_remaining(self):
-    # #     bids_remaining = int(self.Product_max_bids - self.Product_bids)
-    # #     return bids_remaining
-    # # Product_bids_remaining = property(_bids_remaining)
+    def _bids_remaining(self):
+        bids_remaining = int(self.Product_MAX_bid - self.Product_bids)
+        return bids_remaining
+    Product_bids_remaining = property(_bids_remaining)
+
     # Product_bids_remaining = 10
     # # def _bids_percent(self):
     # #     bids_percent = int(self.Product_bids/self.Product_max_bids)

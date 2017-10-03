@@ -33,7 +33,6 @@
 
 <span class="price">Bid price: &#8377;{{item.Product_each_bid_cost}}</span>
 
-
   Bids Placed: {{ item.Product_bids }} of {{item.Product_MAX_bid}}
     <button  style="float:right; " class="w3-button w3-green w3-round-xlarge"  data-toggle="modal" data-target="#{{item.Product_id}}">Bid Now</button>
 <div class="w3-section w3-light-grey">
@@ -47,7 +46,21 @@
 
 </div> <!-- /.col-md-3 -->
 
+<!-- my bids -->
+<!--<div class="modal fade product_view" id="{{item.Product_id}}">-->
+<!--<div class="modal-dialog">-->
+<!--<div class="modal-content">-->
 
+
+
+
+
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!-- palce bids -->
 <div class="modal fade product_view" id="{{item.Product_id}}">
 <div class="modal-dialog">
 <div class="modal-content">
@@ -64,50 +77,38 @@
 <h4>Product Id: <span>{{item.Product_id}}</span></h4>
 <p>{{ item.Product_details }}</p>
 
-<h3><span class="price">Price: &#8377;{{item.Product_price}}</span></h3>
+    <strong>Price: </strong><strike>&#8377; {{item.Product_price}}</strike>
+    <strong>&#8377;{{item.Product_each_bid_cost}}</strong>
 
 <div class="space-ten"></div>
 
 
-<form method="POST" action="/dreambuy/bid/{{item.Product_id}}">{% csrf_token %}
-<table>
-<tr>
-<th style="padding:20px;">
-<th><span class="input-group-btn">
-<button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quote_bids">
+<form method="POST" action="/dreambuy/bid/{{item.Product_id}}">
+    {% csrf_token %}
+
+<div class="quote_bids_center">
+<div class="input-group">
+<span class="input-group-btn">
+<button type="button" class="btn btn-danger btn-number" onclick="minusFunction()" data-type="minus" data-field="quote_bids">
 <span class="glyphicon glyphicon-minus"></span>
 </button>
-</span></th>
-<th>
-
-
-<input type="text" name="quote_bids" class="form-control input-number" style="width: 50px;" value="1"  min="1" max={{prdt.Product_MAX_bids}} />
-
-
-</th>
-<th><span class="input-group-btn">
-<button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quote_bids">
+</span>
+    <input type="hidden" id="mxbidcnt" value={{item.Product_bids_remaining}}>
+<input type="text" name="quote_bids" id="bidcnt" class="form-control input-number" value="1" min="1" max="100">
+<span class="input-group-btn">
+<button type="button" class="btn btn-success btn-number" onclick="plusFunction()" data-type="plus" data-field="quote_bids">
 <span class="glyphicon glyphicon-plus"></span>
 </button>
 </span>
-</th>
+</div>
+</div>
 
-<th style="padding:10px;">
-
-</th>
-
-<th>
+<div class="quote_bids_center_btn">
 <input type="hidden" name="Product_id" value={{item.Product_id}}>
+<input class="w3-button w3-green w3-round-xlarge" style="float: right;"  role="button" onclick='overlay()' type="submit" value="Check Out">
+</div>
 
-<input class="btn button" style="float: right;"  role="button" onclick='overlay()' type="submit" value="Bid now">
-</th>
-</tr>
-
-</table>
 </form>
-
-
-
 </div>
 </div>
 </div>
@@ -131,98 +132,36 @@
     </div> <!-- /.content-section -->
 
 
-<style>
+<script>
 
-function myFunction() {
-    var loadpage = document.getElementById('value').value;
-    alert(loadpage);
+function plusFunction() {
+    var x = document.getElementById("bidcnt").value;
+    var mxbidcnt = document.getElementById("mxbidcnt").value;
 
+    var y = +x+1;
+    if (y > mxbidcnt) {
+        y = mxbidcnt;
+    }
+    if(y > 6){ y = 6;}
+    document.getElementById("bidcnt").value = y;
 }
 
-function overlay() {
-	el = document.getElementById("overlay");
-	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+function minusFunction() {
+    var x = document.getElementById("bidcnt").value;
+    var y = +x-+1
+    if (y < 1) {
+        y = 1;
+    }
+    document.getElementById("bidcnt").value = y;
 }
 
 
-//plugin bootstrap minus and plus
-//http://jsfiddle.net/laelitenetwork/puJ6G/
-$('.btn-number').click(function(e){
-    e.preventDefault();
-
-    fieldName = $(this).attr('data-field');
-    type      = $(this).attr('data-type');
-    var input = $("input[name='"+fieldName+"']");
-    var currentVal = parseInt(input.val());
-    if (!isNaN(currentVal)) {
-        if(type == 'minus') {
-
-            if(currentVal > input.attr('min')) {
-                input.val(currentVal - 1).change();
-            }
-            if(parseInt(input.val()) == input.attr('min')) {
-                $(this).attr('disabled', true);
-            }
-
-        } else if(type == 'plus') {
-
-            if(currentVal < input.attr('max')) {
-                input.val(currentVal + 1).change();
-            }
-            if(parseInt(input.val()) == input.attr('max')) {
-                $(this).attr('disabled', true);
-            }
-
-        }
-    } else {
-        input.val(0);
-    }
-});
-$('.input-number').focusin(function(){
-   $(this).data('oldValue', $(this).val());
-});
-$('.input-number').change(function() {
-
-    minValue =  parseInt($(this).attr('min'));
-    maxValue =  parseInt($(this).attr('max'));
-    valueCurrent = parseInt($(this).val());
-
-    name = $(this).attr('name');
-    if(valueCurrent >= minValue) {
-        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
-    } else {
-        alert('Sorry, the minimum value was reached');
-        $(this).val($(this).data('oldValue'));
-    }
-    if(valueCurrent <= maxValue) {
-        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
-    } else {
-        alert('Sorry, the maximum value was reached');
-        $(this).val($(this).data('oldValue'));
-    }
-
-
-});
-$(".input-number").keydown(function (e) {
-        // Allow: backspace, delete, tab, escape, enter and .
-        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
-             // Allow: Ctrl+A
-            (e.keyCode == 65 && e.ctrlKey === true) ||
-             // Allow: home, end, left, right
-            (e.keyCode >= 35 && e.keyCode <= 39)) {
-                 // let it happen, don't do anything
-                 return;
-        }
-        // Ensure that it is a number and stop the keypress
-        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-            e.preventDefault();
-        }
-    });
 
 </script>
 
 
 <style>
+
 .dropdown {
    display: table-cell;
     vertical-align: middle;
@@ -339,16 +278,19 @@ tr:nth-child(even) {
 
 
 
+.quote_bids_center{
+width: 150px;
+margin:  auto;
+float:left;
+}
+.quote_bids_center_btn{
+width: 150px;
+margin:  auto;
 
+}
 
-
-
-
-
-
-
-        .product_view .modal-dialog{max-width: 800px; width: 100%;}
-        .pre-cost{text-decoration: line-through; color: #a5a5a5;}
-        .space-ten{padding: 10px 0;}
+.product_view .modal-dialog{max-width: 800px; width: 100%;}
+.pre-cost{text-decoration: line-through; color: #a5a5a5;}
+.space-ten{padding: 10px 0;}
 </style>
 {% endblock %}
