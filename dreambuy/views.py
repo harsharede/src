@@ -42,15 +42,23 @@ def get_Product_list(request):
 
 def index(request):
     prdt = Product.objects.all().order_by('Product_bid_percent').reverse()
+    print('prdt:', )
     user = request.user
-    print (user)
+    print ('user',user)
     if user != None:
         try:
-            usrbids = userbids.objects.get(user=user).order_by('bid_time').reverse()
+            print("tring.............##########################")
+            usrbids = userbids.objects.filter(bid_username=user)
+            print('insideusrbids:', usrbids)
+            print("tried")
         except Exception as e:
-            usrbids = e
+            usrbids = userbids.objects.filter(bid_username="Guest")
+    else:
+        usrbids = userbids.objects.filter(bid_username="Guest")
     updateMAX_bid()
     updaterank()
+
+    print('usrbids:',usrbids)
     context = {'prdt': prdt,'usrbids': usrbids}
     return render(request, "dreambuy/index.html", context)
 
@@ -122,11 +130,11 @@ def place_bid(request, prdt_id):
                 cur_prdt.save()
                 amt = int(cur_palced)* cur_prdt_bid_price
                 purpose = str(prdt_id)+'_'+str(cur_palced)+'_'+str(cur_prdt_bid_price)
-                rurl = 'http://www.iwishh.in/dreambuy/pymnt/'
-                response = mk_pymt(amt=10, purpose=purpose, usr='test1', mblnum='', mlid='', rurl=rurl)
-                # print (response)
+                rurl = 'http://127.0.0.1:8000/dreambuy/pymnt/'
+                response = mk_pymt(amt=amt, purpose=purpose, usr='test', mblnum='', mlid='', rurl=rurl)
+                print ("response",response)
                 pymntpth = response['payment_request']['longurl']
-                # print (pymntpth)
+                print ("pymntpth",pymntpth)
                 prdt = get_object_or_404(Product, Product_id=prdt_id)
                 # return render(request, 'dreambuy/details.html', {'prdt': prdt, 'user': user})
                 return HttpResponseRedirect(pymntpth)
@@ -220,18 +228,18 @@ def pymnt(request):
         payment_request_id = str_request[strt+len('&payment_request_id='):-2]
         response = pymt_status(payment_request_id)
         context = {}
-        print(response)
-        prdt_id =int(response[0][:1])
+        print("pymntresponse:",response)
+        prdt_id =response[0].split("_")[0]
         print('prdt_id',prdt_id)
         cur_prdt = Product.objects.get(Product_id=prdt_id)
         cur_prdt_bid_price = cur_prdt.Product_each_bid_cost
         # cur_bids = cur_prdt.Product_bids
-        cur_palced = int(response[0][2:3])
+        cur_palced = int(response[0].split("_")[1])
         print("cur_palced",cur_palced)
         # cur_bids += cur_palced
         # cur_prdt.Product_bids = cur_bids
         user = request.user
-        print(user.id)
+        print(user.username)
         purpose = str(prdt_id) + '_' + str(cur_palced) + '_' + str(cur_prdt_bid_price)
         userbids.objects.create(Product_name=cur_prdt.Product_name,
                                 Product_id=prdt_id,
@@ -242,7 +250,8 @@ def pymnt(request):
                                 pymnt_status='started',
                                 userid=user.id,
                                 purpose=purpose,
-                                payment_request_id=payment_request_id)
+                                payment_request_id=payment_request_id,
+                                bid_username=user.username)
         if response[1]!= 'Credit':
             cur_bids = cur_prdt.Product_bids
             cur_bids -= cur_palced

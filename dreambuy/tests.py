@@ -23,7 +23,7 @@ def select_task_by_priority():
     resultdic = {}
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     database = BASE_DIR+"//db.sqlite3"
-    print(database)
+    # print(database)
     conn = create_connection(database)
     cur = conn.cursor()
     cur.execute("SELECT Product_id, Product_name, Product_bids,Product_Price FROM dreambuy_product")

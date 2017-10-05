@@ -2,12 +2,12 @@
 {% block body %}
 
 
-
-
 <div class="content-section">
 <div class="container">
     <h3 style="font-family:Lobster;"><font color=#FF5733 >Top products </font></h3>
 <div class="row">
+
+
 
 {% if prdt %}
 {% for item in prdt %}
@@ -16,6 +16,8 @@
 <div class="product-item">
 <div class="product-content" >
 <h5><a href="/dreambuy/{{item.Product_id}}">{{ item.Product_name }}</a></h5>
+
+
 
 <br>
 <br>
@@ -31,10 +33,10 @@
 
 <strike><span class="price">Price: &#8377;{{item.Product_price}}</span></strike>
 
-<span class="price">Bid price: &#8377;{{item.Product_each_bid_cost}}</span>
+<span class="price">wishh for: &#8377;{{item.Product_each_bid_cost}}</span>
 
-  Bids Placed: {{ item.Product_bids }} of {{item.Product_MAX_bid}}
-    <button  style="float:right; " class="w3-button w3-green w3-round-xlarge"  data-toggle="modal" data-target="#{{item.Product_id}}">Bid Now</button>
+  Wishh's: {{ item.Product_bids }} of {{item.Product_MAX_bid}}
+    <button  style="float:right; " class="w3-button w3-green w3-round-xlarge"  data-toggle="modal" data-target="#{{item.Product_id}}">Wish Now</button>
 <div class="w3-section w3-light-grey">
 
   <div class="w3-container w3-round w3-blue w3-center" style="width:{{item.Product_bid_percent}}%">{{item.Product_bid_percent}}%</div>
@@ -51,14 +53,10 @@
 <!--<div class="modal-dialog">-->
 <!--<div class="modal-content">-->
 
-
-
-
-
-
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
+
 
 <!-- palce bids -->
 <div class="modal fade product_view" id="{{item.Product_id}}">
@@ -89,14 +87,16 @@
 <div class="quote_bids_center">
 <div class="input-group">
 <span class="input-group-btn">
-<button type="button" class="btn btn-danger btn-number" onclick="minusFunction()" data-type="minus" data-field="quote_bids">
+<button type="button" class="btn btn-danger btn-number" onclick = minusFunction({{item.Product_id}}1) data-type="minus" data-field="quote_bids">
 <span class="glyphicon glyphicon-minus"></span>
 </button>
 </span>
-    <input type="hidden" id="mxbidcnt" value={{item.Product_bids_remaining}}>
-<input type="text" name="quote_bids" id="bidcnt" class="form-control input-number" value="1" min="1" max="100">
+
+    <input type="hidden" id=rbidcnt value="{{item.Product_bids}}">
+<input type="text" name="quote_bids" id={{item.Product_id}}1 class="form-control input-number" value="1" min="1" max="100">
+    <!--<h3>{{item.Product_id}}1</h3>-->
 <span class="input-group-btn">
-<button type="button" class="btn btn-success btn-number" onclick="plusFunction()" data-type="plus" data-field="quote_bids">
+<button type="button" class="btn btn-success btn-number" onclick = plusFunction({{item.Product_id}}1,{{item.Product_bids_remaining}}) data-type="plus" data-field="quote_bids">
 <span class="glyphicon glyphicon-plus"></span>
 </button>
 </span>
@@ -117,50 +117,105 @@
 </div>
 
 
-
-
-
 {% endfor %}
 
-            {% else %}
-                <h3> you don't have any category's </h3>
-            {% endif %}
+{% else %}
+    <h3> you don't have any category's </h3>
+{% endif %}
 
 
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /.content-section -->
+<!-- my wishes -->
 
 
-<script>
+<div class="modal fade product_view" id="mywishh">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
 
-function plusFunction() {
-    var x = document.getElementById("bidcnt").value;
-    var mxbidcnt = document.getElementById("mxbidcnt").value;
 
+    <!--{% ifnotequal user "AnonymousUser" %}-->
+        <!--<h3>{{user}}, You need to login</h3>-->
+    <!--{% else %}-->
+    <!--<h3 class="modal-title">{{ user.username }} wishh's</h3>-->
+    <!---->
+<!--{% endifnotequal %}-->
+ <h3 class="modal-title">{{ user.username }} wishh's</h3>
+
+</div>
+
+<table>
+  <tr>
+    <th>Product_id</th>
+    <th>Product_name</th>
+    <th>bid_count</th>
+    <th>bid_time</th>
+  </tr>
+{% for wishh in usrbids %}
+        <tr>
+    <th>{{ wishh.Product_id }}</th>
+    <th>{{ wishh.Product_name }}</th>
+    <th>{{ wishh.bid_count }}</th>
+    <th>{{ wishh.bid_time }}</th>
+  </tr>
+
+{% endfor %}
+</table>
+
+</div>
+</div>
+</div>
+
+
+
+</div> <!-- /.row -->
+</div> <!-- /.container -->
+</div> <!-- /.content-section -->
+
+
+<script >
+
+function plusFunction(pid,rbidcnt) {
+    //alert(pid);
+    var x = document.getElementById(pid.id).value;
     var y = +x+1;
-    if (y > mxbidcnt) {
-        y = mxbidcnt;
+    if (y > +rbidcnt) {
+        y = +rbidcnt;
     }
     if(y > 6){ y = 6;}
-    document.getElementById("bidcnt").value = y;
+    document.getElementById(pid.id).value = y;
 }
 
-function minusFunction() {
-    var x = document.getElementById("bidcnt").value;
-    var y = +x-+1
+function minusFunction(pid) {
+    var x = document.getElementById(pid.id).value;
+    var y = +x-1
     if (y < 1) {
         y = 1;
     }
-    document.getElementById("bidcnt").value = y;
+    document.getElementById(pid.id).value = y;
 }
-
-
 
 </script>
 
-
 <style>
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
 
 .dropdown {
    display: table-cell;
@@ -293,4 +348,6 @@ margin:  auto;
 .pre-cost{text-decoration: line-through; color: #a5a5a5;}
 .space-ten{padding: 10px 0;}
 </style>
+
+
 {% endblock %}
