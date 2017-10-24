@@ -60,7 +60,8 @@ def index(request):
 
     print('usrbids:',usrbids)
     context = {'prdt': prdt,'usrbids': usrbids}
-    return render(request, "dreambuy/index.html", context)
+    return render(request, "dreambuy/index.html", context=context)
+    # return render(request, "dreambuy/checkout.html", context={})
 
 def FAQs(request):
     return render(request, 'dreambuy/FAQs.html',{})
@@ -117,7 +118,7 @@ def place_bid(request, prdt_id):
                 cur_prdt.Product_bids = cur_bids
                 user = request.user
                 print(user.id)
-                purpose = str(prdt_id) + '_' + str(cur_palced) + '_' + str(cur_prdt_bid_price)
+                # purpose = str(prdt_id) + '_' + str(cur_palced) + '_' + str(cur_prdt_bid_price)
                 # userbids.objects.create(Product_name=cur_prdt.Product_name,
                 #                     Product_id=prdt_id,
                 #                     user=user,
@@ -127,11 +128,11 @@ def place_bid(request, prdt_id):
                 #                     pymnt_status='started',
                 #                     userid = user.id,
                 #                         purpose=purpose)
-                cur_prdt.save()
+                # cur_prdt.save()
                 amt = int(cur_palced)* cur_prdt_bid_price
                 purpose = str(prdt_id)+'_'+str(cur_palced)+'_'+str(cur_prdt_bid_price)
                 rurl = 'http://127.0.0.1:8000/dreambuy/pymnt/'
-                response = mk_pymt(amt=amt, purpose=purpose, usr='test', mblnum='', mlid='', rurl=rurl)
+                response = mk_pymt(amt=10, purpose=purpose, usr=user.username, mblnum='', mlid='', rurl=rurl)
                 print ("response",response)
                 pymntpth = response['payment_request']['longurl']
                 print ("pymntpth",pymntpth)
@@ -224,6 +225,7 @@ def pymnt(request):
         return render(request, 'dreambuy/login.html')
     else:
         str_request = str(request)
+        print ("Instamojo reply",str_request)
         strt = str_request.find("&payment_request_id=")
         payment_request_id = str_request[strt+len('&payment_request_id='):-2]
         response = pymt_status(payment_request_id)

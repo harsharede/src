@@ -25,6 +25,7 @@ def pymt_status(payment_request_id):
     response = requests.get("https://www.instamojo.com/api/1.1/payment-requests/"+str(payment_request_id)+"/",
       headers=headers)
     response = (response.json())
+    print ("pymt_status_api:",response)
 
     return [response['payment_request']['purpose'],response['payment_request']['payments'][0]['status'],response['payment_request']['payments'][0]['amount']]
 

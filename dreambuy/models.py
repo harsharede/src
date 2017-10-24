@@ -97,7 +97,7 @@ class Product(models.Model):
         return self.Product_brand + ' - ' + self.Product_name + ' - ' + str(self.Product_price)
 
 class userbids(models.Model):
-    Product_id =models.CharField(max_length=50,unique=True,blank=False,default=prdtcode)
+    Product_id =models.CharField(max_length=50,blank=False,default=prdtcode)
     Product_name = models.CharField(max_length=250)
     user = models.ForeignKey(User, default=1)
     userid = models.IntegerField(default=1)

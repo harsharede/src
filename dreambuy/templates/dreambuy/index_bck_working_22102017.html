@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!--suppress ProblematicWhitespace, InconsistentLineSeparators -->
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Deft | CodeRare</title>
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+      <!-- Favicon ================== -->
+      <!-- Standard -->
+      <link rel="shortcut icon" href="{% static './img/favicon-144.png' %}">
+      <!-- Retina iPad Touch Icon-->
+      <link rel="apple-touch-icon" sizes="144x144" href="{% static './img/favicon-144.png' %}">
+      <!-- Retina iPhone Touch Icon-->
+      <link rel="apple-touch-icon" sizes="114x114" href="{% static './img/favicon-114.png' %}">
+      <!-- Standard iPad Touch Icon-->
+      <link rel="apple-touch-icon" sizes="72x72" href="{% static './img/favicon-72.png' %}">
+      <!-- Standard iPhone Touch Icon-->
+      <link rel="apple-touch-icon" sizes="57x57" href="{% static './img/favicon-57.png' %}">
+
+      <!--  Resources style ================== -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link href="{% static './css/theme-FuchiStudio.css' %}" rel="stylesheet" type="text/css" media="all"/>
+		
+
+
+	  </head>
+    <body>
+
+<section class="animsition">
+<div id="na/js/jquery-1.11.3.min.jsvbar">
+<ul class="nav">
+<strong>
+<li><a href="#home">Home</a></li>
+<li><a href="#contact">Contact</a></li>
+</strong>
+</ul>
+
+
+        <div id="leftSide" class="gradient">
+          <div id="home" >
+            <!-- Your logo -->
+  			    <img src="{% static './img/logo.png' %}" alt="" class="main-logo" />
+
+            <div class="h-content">
+              <h1>Hello Guys!<br> Dreambuy is Coming Soon...</h1>
+              <p>A place where you can win your dream product for just Rs.499 or you will get a Amazon cashback</p>
+            </div>
+
+            <ul class="social_icons">
+              <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+              <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+              <li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+              <li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div id="rightSide">
+
+          <div class="project">
+
+
+
+              <ul class="gallery project_navigation">
+{% if prdt %}
+{% for item in prdt %}
+<li class="item col-sm-6 col-xs-12">
+<figure>
+<!-- Your picture -->
+
+{% ifequal item.Product_bids item.Product_MAX_bid %}
+    <h3><strong><u>{{ item.Product_name }}</u> <font color="red">Sold off</font></strong></h3>
+{% else %}
+    <h3><u><strong>{{ item.Product_name }}</strong></u><small> <font color="Green">({{ item.Product_bids }} Sold off)</font> </small></h3>
+{% endifequal %}
+
+<img src="{{ item.Product_image }}" alt="This is my work" class="img-responsive" />
+<!-- Picture's description below this one -->
+<figcaption class="caption">
+<div class="photo-details">
+<h4>MRP: <strike>&#8377;{{ item.Product_price }}</strike> </h4>
+    <h6>Coupon Price: &#8377;{{item.Product_each_bid_cost}} ({{ item.Product_bids }} sold of {{item.Product_MAX_bid}} Coupons)</h6>
+</div>
+
+{% ifequal item.Product_bids item.Product_MAX_bid %}
+    <input class="w3-button w3-red" style="float: right;"  role="button" onclick='overlay()' type="submit" value="Sold off">
+{% else %}
+    <button  style="float:right; " class="w3-button w3-deep-purple"  data-toggle="modal" data-target="#{{item.Product_id}}">Wish Now</button>
+{% endifequal %}
+
+</figcaption>
+</figure>
+<p>
+On purchase of this coupon you may win {{ item.Product_name }} or will get a cash back of &#8377; 1000
+</p>
+</li>
+
+
+
+
+<div class="modal fade product_view" id="{{item.Product_id}}">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a href="#" data-dismiss="modal"  style="float:right;" class="w3-button w3-deep-purple"><span class="glyphicon glyphicon-remove"></span></a>
+<h3 class="modal-title">{{ item.Product_name }}</h3>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-md-6 product_img">
+<img src="{{ item.Product_image }}" class="img-responsive">
+</div>
+<div class="col-md-6 product_content">
+<h4>Product Id: <span>{{item.Product_id}}</span></h4>
+<p>{{ item.Product_details }}</p>
+
+    <strong>Price: </strong><strike>&#8377; {{item.Product_price}}</strike>
+    <strong>&#8377;{{item.Product_each_bid_cost}}</strong>
+
+<div class="space-ten"></div>
+
+
+<form method="POST" action="/dreambuy/bid/{{item.Product_id}}">
+    {% csrf_token %}
+
+<div class="quote_bids_center">
+<div class="input-group">
+
+
+<span class="input-group-btn">
+<button type="button" class="btn btn-danger btn-number" onclick = minusFunction({{item.Product_id}}1) data-type="minus" data-field="quote_bids">
+<span class="glyphicon glyphicon-minus"></span>
+</button>
+</span>
+
+<input type="hidden" id=rbidcnt value="{{item.Product_bids}}">
+<input type="text" name="quote_bids" id={{item.Product_id}}1 class="form-control input-number" value="1" min="1" max="100">
+<!--<h3>{{item.Product_id}}1</h3>-->
+
+<span class="input-group-btn">
+<button type="button" class="btn btn-success btn-number" onclick = plusFunction({{item.Product_id}}1,{{item.Product_bids_remaining}}) data-type="plus" data-field="quote_bids">
+<span class="glyphicon glyphicon-plus"></span>
+</button>
+</span>
+</div>
+</div>
+
+
+<input type="hidden" name="Product_id" value={{item.Product_id}}>
+<input class="w3-button w3-deep-purple" style="float: right;"  role="button" onclick='overlay()' type="submit" value="Get Now">
+
+
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+{% endfor %}
+{% else %}
+    <h3> you don't have any category's </h3>
+{% endif %}
+
+</ul>
+
+
+
+          </div>
+
+
+          <footer>
+            <p class="uppercase">© Dreambuy - Made With Love <i class="ion-heart"></i></p>
+            
+			<div class="drag">
+              <i class="up ion-arrow-up-c"></i>
+            </div>
+
+          </footer>
+
+        </div>
+      </section>
+	  <script>
+	  
+	  var offset = 300,
+	//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+	offset_opacity = 1200,
+	//duration of the top scrolling animation (in ms)
+	scroll_top_duration = 700;
+	  
+	  </script>
+      <script src="{% static './js/jquery-1.11.3.min.js' %}"></script>
+      <script src="{% static './js/bootstrap.min.js' %}"></script>
+      <script src="{% static './js/animsition.min.js' %}"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+      <script src="{% static './js/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static './js/jquery.countdown.min.js' %}"></script>
+      <script src="{% static './js/twitterFetcher_min.js' %}"></script>
+      <script src="{% static './js/masonry.pkgd.min.js' %}"></script>
+      <script src="{% static './js/imagesloaded.pkgd.min.js' %}"></script>
+      <script src="{% static './js/jquery.flexslider-min.js' %}"></script>
+      <script src="{% static './js/photoswipe.min.js' %}"></script>
+      <script src="{% static './js/photoswipe-ui-default.min.js' %}"></script>
+      <script src="{% static './js/jqinstapics.min.js' %}"></script>
+      <script src="{% static './js/script.js' %}"></script>
+
+
+
+
+
+
+    </body>
+
+<script >
+
+function plusFunction(pid,rbidcnt) {
+    //alert(pid);
+    var x = document.getElementById(pid.id).value;
+    var y = +x+1;
+    if (y > +rbidcnt) {
+        y = +rbidcnt;
+    }
+    if(y > 6){ y = 6;}
+    document.getElementById(pid.id).value = y;
+}
+
+function minusFunction(pid) {
+    var x = document.getElementById(pid.id).value;
+    var y = +x-1
+    if (y < 1) {
+        y = 1;
+    }
+    document.getElementById(pid.id).value = y;
+}
+
+</script>
+
+<style>
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+.dropdown {
+   display: table-cell;
+    vertical-align: middle;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    vertical-align: middle;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    vertical-align: middle;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+.zoomin img {
+  height: 200px;
+  width: 200px;
+  -webkit-transition: all 2s ease;
+     -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+          transition: all 2s ease;
+}
+.zoomin img:hover {
+  width: 300px;
+  height: 300px;
+}
+
+
+.thumbnail:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:500px;
+    height:auto;x
+    z-index:999;
+    display:inline;
+}
+
+.imgContainer{
+    float:left;
+}
+
+
+.details_div {
+
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+}
+
+
+.tumbs{
+display: inline-block;;
+}
+
+.center{
+width: 10px;
+}
+
+.wrapper {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+
+#outer
+{
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+
+}
+
+td{
+ border: none;
+},
+th {
+
+    text-align: center;
+
+     border: 1px solid #CCC;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
+.quote_bids_center{
+width: 150px;
+margin:  auto;
+float:left;
+}
+.quote_bids_center_btn{
+width: 150px;
+margin:  auto;
+
+}
+
+.product_view .modal-dialog{max-width: 800px; width: 100%;}
+.pre-cost{text-decoration: line-through; color: #a5a5a5;}
+.space-ten{padding: 10px 0;}
+</style>
+
+</html>
+

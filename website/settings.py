@@ -59,10 +59,7 @@ ROOT_URLCONF = 'website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['website/dreambuy/templates',
-                 'website/dreambuy/templates/dreambuy',
-                 'website/dreambuy/templates/dreambuy/base.html'
-                 ],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,12 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = 'C:\dev\website\static\static_root'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static','static_root')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static','static_dirs'),'/var/www/static/')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static','media')
-MEDIA_URL = '/media/'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
