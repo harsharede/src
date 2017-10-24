@@ -1,6 +1,6 @@
+c = 100
 
-response=['bjagjibgbcag_1_500', 'Credit', '13.78']
-prdt_id =response[0].split("_")[0]
-print (prdt_id)
 
-print(response)
+for i in range(c):
+    a = format(i, "03d")
+    print (int(a)+int(i))

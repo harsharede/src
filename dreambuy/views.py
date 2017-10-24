@@ -4,7 +4,7 @@ from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404,redirect
 from django.http import HttpResponse
-from .models import Product, userbids
+from .models import Product, userbids,Product_bids
 from django.http import Http404, HttpResponseRedirect
 from .forms import UserForm
 # Create your views here.
@@ -22,6 +22,19 @@ from django.core import serializers
 from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .payment import mk_pymt, pymt_status
+from random import randint
+
+def get_bid_code(prdt_id):
+    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    alphs = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+    num = randint(1000000000, 9999999999)
+    code = ''
+    for i in list(str(num)):
+        code = code+alphs[int(i)]
+
+
+    return code
+
 
 def get_Product_list(request):
     if not request.user.is_authenticated():
@@ -241,7 +254,6 @@ def pymnt(request):
         # cur_bids += cur_palced
         # cur_prdt.Product_bids = cur_bids
         user = request.user
-        print(user.username)
         purpose = str(prdt_id) + '_' + str(cur_palced) + '_' + str(cur_prdt_bid_price)
         userbids.objects.create(Product_name=cur_prdt.Product_name,
                                 Product_id=prdt_id,
@@ -254,9 +266,40 @@ def pymnt(request):
                                 purpose=purpose,
                                 payment_request_id=payment_request_id,
                                 bid_username=user.username)
+
+        for c in range(1,int(cur_palced)+1):
+            bid_code = get_bid_code(prdt_id)
+            print (bid_code)
+            bid_codes = Product_bids.objects.filter(Product_id=prdt_id).values_list("bid_id", flat=True)
+            print (bid_codes)
+            while bid_code in bid_codes:
+                bid_code = get_bid_code(prdt_id)
+                print('In loop',bid_code)
+
+
+            Product_bids.objects.create(Product_name=cur_prdt.Product_name,
+                                    Product_id=prdt_id,
+                                    user=user,
+                                    bid_time=str(datetime.datetime.now()),
+                                    bid_count=cur_palced,
+                                    cur_prdt_bid_price=cur_prdt_bid_price,
+                                    pymnt_status='started',
+                                    userid=user.id,
+                                    purpose=purpose,
+                                    payment_request_id=payment_request_id,
+                                    bid_username=user.username,
+                                    bid_id=bid_code)
+
+        print (response[1])
         if response[1]!= 'Credit':
             cur_bids = cur_prdt.Product_bids
             cur_bids -= cur_palced
             cur_prdt.Product_bids = cur_bids
+            cur_prdt.save()
+        else:
+            cur_bids = cur_prdt.Product_bids
+            cur_bids += cur_palced
+            cur_prdt.Product_bids = cur_bids
+            print("saving cur_bids",cur_bids)
             cur_prdt.save()
         return render(request, "dreambuy/pymnt_sucess.html", context)

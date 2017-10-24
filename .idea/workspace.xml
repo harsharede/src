@@ -2,628 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1147da3-b939-4bde-ada0-2e998bda7738" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/default-skin/default-skin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/default-skin/preloader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/flexslider-icon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/flexslider-icon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/flexslider-icon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/ionicons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/ionicons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/ionicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/1400-2000.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/1400x2000.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/1920x1280.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/1920x1280.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/404.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/600x600.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/agency-particles.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/agency.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/app.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/app1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/app2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/app3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/app4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/app5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/app6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/avatar1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/bride-shoes.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/bride.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/bride.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/client.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/client1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/client2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/client3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/client4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/coffee-photo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/couple.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/cross-jesus-wedding-crucifix.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/description.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/description.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/description.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/event.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/favicon-114.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/favicon-144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/favicon-57.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/favicon-72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/food-couple-sweet-married.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/food-plate-yellow-white.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/groom.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/guitar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/hand-taking-photo-photography-vintage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/iPhone.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/icon-zoom-dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/icon-zoom-out-dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/icon-zoom-out.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/icon-zoom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/icon_map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/instagram.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/iphone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/iphone1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/iphone2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/iphone3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/loago.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/logo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/member.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/member1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/member2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/member3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/person-woman-art-creative.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-14075.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-14075.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-24407.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-29858.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-41498.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-41498.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-51358.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-51358.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-57690.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-57690.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-99614.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/pexels-photo-99614.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/preview.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/quotes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/shells-massage-therapy-sand.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/soon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/table-chair.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/tower.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/tower.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/typing-vintage-technology-keyboard.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/wedding-location.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/wedding.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/wood-coffee-camera-desk-16510.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/img/wood-wooden-design-sculpture.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/animsition.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/default-skin/default-skin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/default-skin/default-skin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/flexslider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/icon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/ionicons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/jquery.mCustomScrollbar.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/magnific-popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/photoswipe.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-Dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-FuchiStudio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-Gossime.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-MariBlue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-Mosqlue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-Mountise.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-NeonSun.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-Rradilet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/css/theme-vooBush.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/flexslider-icon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/ionicons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/animsition.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/imagesloaded.pkgd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/jqinstapics.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/jquery-1.11.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/jquery.countdown.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/jquery.flexslider-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/jquery.mCustomScrollbar.concat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/jquery.magnific-popup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/jquery.mousewheel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/masonry.pkgd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/particles.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/photoswipe-ui-default.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/photoswipe.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/spectragram.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/js/twitterFetcher_min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/php/mailer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/_style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/_var.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-Dark.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-FuchiStudio.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-Gossime.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-MariBlue.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-Mosqlue.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-Mountise.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-NeonSun.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-Rradilet.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/static/scss/theme-vooBush.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/checkout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/index_bck_working_22102017.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/index_bckup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/login_bckup22102017.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/static/dreambuy/images/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/static/dreambuy/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/static/dreambuy/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/static/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/article-lists/article-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/article-lists/article-list-large.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/article-lists/article-list-thumbnails.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/article-lists/article-list-vertical.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/image-lists/image-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/image-lists/image-list-small.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/product-lists/product-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/product-lists/product-list-small.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/product-lists/product-list-vertical.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/user-profiles-lists/user-profiles-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/user-profiles-lists/user-profiles-list-minimal.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/css/user-profiles-lists/user-profiles-list-small.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/avatars/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/avatars/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/avatars/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/avatars/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/avatars/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/pictures/bahnhoff.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/pictures/colosseum.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/pictures/industrial-mech.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/pictures/sahale-wa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/pictures/sands-of-life.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/pictures/tonemapped.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/products/htc-one.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/products/iphone6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/assets/images/products/sony-xperia-z3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/css/normalize.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/css/templatemo-misc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/css/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/linecons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/linecons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/linecons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/linecons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/revicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/revicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/revicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/fonts/revicons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/featured/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/gallery-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/gallery-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/gallery-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/gallery-image-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/gallery-image-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/grabbing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/products/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/products/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/products/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/products/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/tm-170x80-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/images/tm-170x80-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/js/jquery.easing-1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/js/plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/js/vendor/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/js/vendor/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/js/vendor/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/debug.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/images/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dreambuy/templates/loginpage/js/jquery-1.12.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/normalize.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/templatemo-misc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/linecons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/linecons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/linecons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/linecons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/revicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/revicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/revicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/revicons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/Webp.net-gifmaker.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/featured/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/gallery-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/gallery-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/gallery-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/gallery-image-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/gallery-image-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/grabbing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/products/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/products/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/products/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/products/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/tm-170x80-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/tm-170x80-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/jquery.easing-1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/normalize.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/css/normalize.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/css/templatemo-misc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/css/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/linecons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/linecons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/linecons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/linecons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/revicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/revicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/revicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/fonts/revicons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/featured/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/gallery-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/gallery-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/gallery-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/gallery-image-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/gallery-image-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/grabbing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/products/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/products/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/products/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/products/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/tm-170x80-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/images/tm-170x80-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/jquery.easing-1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/vendor/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/vendor/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_dirs/js/vendor/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/changelists.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/dashboard.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/fonts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/forms.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/login.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/rtl.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/css/widgets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/fonts/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/fonts/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/fonts/Roboto-Bold-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/fonts/Roboto-Light-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/fonts/Roboto-Regular-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/calendar-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/gis/move_vertex_off.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/gis/move_vertex_on.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-addlink.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-alert.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-calendar.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-changelink.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-clock.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-deletelink.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-no.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-unknown-alt.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-unknown.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/icon-yes.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/inline-delete.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/search.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/selector-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/sorting-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/tooltag-add.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/img/tooltag-arrowright.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/SelectBox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/SelectFilter2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/actions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/actions.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/calendar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/collapse.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/inlines.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/inlines.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/jquery.init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/prepopulate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/prepopulate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/timeparse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/urlify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/vendor/jquery/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/vendor/jquery/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/admin/js/vendor/xregexp/xregexp.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/css/normalize.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/css/templatemo-misc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/css/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/dreambuy/images/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/dreambuy/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/dreambuy/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/linecons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/linecons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/linecons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/linecons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/revicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/revicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/revicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/fonts/revicons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/featured/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/gallery-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/gallery-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/gallery-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/gallery-image-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/gallery-image-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/grabbing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/products/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/products/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/products/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/products/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/tm-170x80-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/images/tm-170x80-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/jquery.easing-1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/vendor/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/vendor/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/js/vendor/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/css/bootstrap-tweaks.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/css/default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/css/prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/css/font-awesome-4.0.3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/css/highlight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/css/jquery.json-view.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/img/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/img/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/js/api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/js/highlight.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/js/jquery-1.10.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/js/jquery.json-view.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/img/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/img/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/img/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/js/ajax-form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/js/coreapi-0.1.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/js/csrf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/js/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/js/jquery-1.12.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/js/prettify-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/templatemo-misc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/article-lists/article-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/article-lists/article-list-large.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/article-lists/article-list-thumbnails.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/article-lists/article-list-vertical.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/image-lists/image-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/image-lists/image-list-small.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/product-lists/product-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/product-lists/product-list-small.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/product-lists/product-list-vertical.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/user-profiles-lists/user-profiles-list-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/user-profiles-lists/user-profiles-list-minimal.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/css/user-profiles-lists/user-profiles-list-small.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/avatars/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/avatars/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/avatars/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/avatars/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/avatars/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/pictures/bahnhoff.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/pictures/colosseum.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/pictures/industrial-mech.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/pictures/sahale-wa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/pictures/sands-of-life.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/pictures/tonemapped.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/products/htc-one.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/products/iphone6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/assets/images/products/sony-xperia-z3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/base.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/base_test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/base_visitor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/contact.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/css/normalize.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/css/templatemo-misc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/css/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/debug.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/details.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/linecons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/linecons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/linecons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/linecons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/revicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/revicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/revicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/fonts/revicons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/form_template.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/featured/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/gallery-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/gallery-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/gallery-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/gallery-image-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/gallery-image-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/grabbing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/products/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/products/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/products/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/products/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/tm-170x80-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/images/tm-170x80-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/index_old.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/js/jquery.easing-1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/js/plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/js/vendor/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/js/vendor/jquery.gmap3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/js/vendor/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/login_old.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/product-detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/pymnt_sucess.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/register.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website/dreambuy/test_reg.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/static_root/rest_framework/docs/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/dreambuy/static/fonts/glyphicons-halflings-regular.woff2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/models.py" afterPath="$PROJECT_DIR$/dreambuy/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/payment.py" afterPath="$PROJECT_DIR$/dreambuy/payment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/form_template.html" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/form_template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/index.html" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/index_old.html" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/index_old.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/login.html" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/pymnt_sucess.html" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/pymnt_sucess.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/templates/dreambuy/register.html" afterPath="$PROJECT_DIR$/dreambuy/templates/dreambuy/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/test2.py" afterPath="$PROJECT_DIR$/dreambuy/test2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dreambuy/views.py" afterPath="$PROJECT_DIR$/dreambuy/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/settings.py" afterPath="$PROJECT_DIR$/website/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -634,12 +17,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dreambuy/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3519">
-              <caret line="230" column="30" lean-forward="false" selection-start-line="230" selection-start-column="19" selection-end-line="230" selection-end-column="30" />
+            <state relative-caret-position="218">
+              <caret line="278" column="0" lean-forward="true" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dreambuy/test2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dreambuy/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="e#19#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -656,21 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="113" column="17" lean-forward="true" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dreambuy/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="108" column="67" lean-forward="false" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
+            <state relative-caret-position="712">
+              <caret line="128" column="10" lean-forward="false" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -679,8 +76,8 @@
       <file leaf-file-name="pymnt_sucess.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dreambuy/templates/dreambuy/pymnt_sucess.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="90" column="26" lean-forward="false" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+            <state relative-caret-position="1513">
+              <caret line="89" column="11" lean-forward="false" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -739,16 +136,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dreambuy/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -760,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>href</find>
       <find>/js/jquery-1.11.3.min.js</find>
       <find>bootstrap.min.js</find>
       <find>{% static '/</find>
@@ -790,6 +176,7 @@
       <find>dreambuy_userbids.Product_id</find>
       <find>right</find>
       <find>pymt_status</find>
+      <find>save</find>
     </findStrings>
     <replaceStrings>
       <replace>{% static './</replace>
@@ -807,7 +194,6 @@
       <list>
         <option value="$PROJECT_DIR$/dreambuy/templates/dreambuy/details.html" />
         <option value="$PROJECT_DIR$/dreambuy/templates/dreambuy/test.html" />
-        <option value="$PROJECT_DIR$/dreambuy/test2.py" />
         <option value="$PROJECT_DIR$/dreambuy/tests.py" />
         <option value="$PROJECT_DIR$/dreambuy/templates/dreambuy/base.html" />
         <option value="$PROJECT_DIR$/website/settings.py" />
@@ -820,14 +206,15 @@
         <option value="$PROJECT_DIR$/dreambuy/templates/dreambuy/index.html" />
         <option value="$PROJECT_DIR$/dreambuy/templates/dreambuy/form_template.html" />
         <option value="$PROJECT_DIR$/dreambuy/templates/dreambuy/register.html" />
-        <option value="$PROJECT_DIR$/dreambuy/views.py" />
-        <option value="$PROJECT_DIR$/dreambuy/models.py" />
         <option value="$PROJECT_DIR$/dreambuy/templates/dreambuy/pymnt_sucess.html" />
         <option value="$PROJECT_DIR$/dreambuy/payment.py" />
+        <option value="$PROJECT_DIR$/dreambuy/models.py" />
+        <option value="$PROJECT_DIR$/dreambuy/test2.py" />
+        <option value="$PROJECT_DIR$/dreambuy/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="1942" />
@@ -865,6 +252,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -892,7 +280,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -963,20 +350,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53763443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48064515" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49462366" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Viewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23987207" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1147,20 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dreambuy/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreambuy/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/dreambuy/index.html" />
     <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css" />
     <entry file="file://$PROJECT_DIR$/static/scss/_var.scss" />
@@ -1319,18 +692,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dreambuy/views.py">
+    <entry file="file://$PROJECT_DIR$/website/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3519">
-          <caret line="230" column="30" lean-forward="false" selection-start-line="230" selection-start-column="19" selection-end-line="230" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="368">
+          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dreambuy/templates/dreambuy/pymnt_sucess.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="26" lean-forward="false" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+        <state relative-caret-position="1513">
+          <caret line="89" column="11" lean-forward="false" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1340,8 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dreambuy/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="108" column="67" lean-forward="false" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
+        <state relative-caret-position="712">
+          <caret line="128" column="10" lean-forward="false" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1356,11 +728,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/settings.py">
+    <entry file="file://$PROJECT_DIR$/dreambuy/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="113" column="17" lean-forward="true" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
+        <state relative-caret-position="320">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreambuy/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreambuy/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="278" column="0" lean-forward="true" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

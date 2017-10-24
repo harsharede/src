@@ -110,5 +110,24 @@ class userbids(models.Model):
     bid_username = models.CharField(max_length=10, default=1,blank=False)
 
 
+
+    def __str__(self):
+        return str(self.bid_time)+ ' - ' + str(self.Product_id)
+
+class Product_bids(models.Model):
+    Product_id =models.CharField(max_length=50,blank=False,default=prdtcode)
+    Product_name = models.CharField(max_length=250)
+    user = models.ForeignKey(User, default=1)
+    userid = models.IntegerField(default=1)
+    bid_time = models.CharField(max_length=250)
+    bid_count = models.IntegerField()
+    pymnt_status = models.CharField(max_length=10, default=1)
+    cur_prdt_bid_price = models.IntegerField(default=500)
+    purpose = models.CharField(max_length=10, default=1)
+    payment_request_id = models.CharField(max_length=10, default=1)
+    bid_username = models.CharField(max_length=10, default=1,blank=False)
+    bid_id = models.CharField(max_length=10, default=1, blank=False)
+
+
     def __str__(self):
         return str(self.bid_time)+ ' - ' + str(self.Product_id)
