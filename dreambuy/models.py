@@ -59,6 +59,12 @@ class Product(models.Model):
     Product_each_bid_cost = models.IntegerField(default=500)
     Product_MAX_bid = models.IntegerField(default=0)
     Product_bid_percent = models.IntegerField(default=0)
+    Product_sold = models.CharField(max_length=20,blank=False,default="Open")
+    Product_winner = models.CharField(max_length=10, default=1,blank=False)
+    Product_winner_id = models.IntegerField(default=1)
+    AWS_percent = models.IntegerField(default=1)
+    AWS_affliate_link = models.CharField(max_length=25000000, default='http://www.freeiconspng.com/uploads/no-image-icon-15.png')
+
     #
     #
     # # def _max_bids(self):
@@ -131,3 +137,15 @@ class Product_bids(models.Model):
 
     def __str__(self):
         return str(self.bid_time)+ ' - ' + str(self.Product_id)
+
+
+class lucky_products(models.Model):
+    Product_id =models.CharField(max_length=50,blank=False,default=prdtcode)
+    Product_name = models.CharField(max_length=250)
+    winner = models.ForeignKey(User, default=1)
+    winner_userid = models.IntegerField(default=1)
+    time = models.CharField(max_length=250)
+
+
+    def __str__(self):
+        return str(self.winner_userid)+ ' - ' + str(self.Product_id)+ ' - ' + str(self.Product_name)

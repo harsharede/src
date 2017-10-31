@@ -23,7 +23,7 @@
       <!--  Resources style ================== -->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link href="{% static './css/theme-FuchiStudio.css' %}" rel="stylesheet" type="text/css" media="all"/>
-		
+
 
 
 	  </head>
@@ -48,6 +48,7 @@
 <li><a href="#home">Home</a></li>
 <li><a href="#contact">Winners</a></li>
 
+    <script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="oneecoms-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="Search for your product";amzn_assoc_theme ="dark"; amzn_assoc_bg_color ="000000"; </script><script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
 
 
 <li style="visibility: hidden;">.</li>
@@ -56,32 +57,103 @@
 </ul>
 
 
-<div id="leftSide" class="gradient">
-<div id="home" >
-<!-- Your logo -->
-<img src="{% static './img/logo.png' %}" alt="" class="main-logo" />
-<div class="h-content">
-
-<h1> DCC is Coming Soon...</h1>
-<p>A place where you can win your dream product for just Rs.499 or you will get a Amazon cashback</p>
-<h2 style="text-transform: capitalize;">Hello, {{user}}!</h2>
-
-
-
-    <table >
-        <h4><u>Recent winners</u></h4>
-  <tr>
+        <div id="leftSide" class="gradient">
+          <div id="home" >
+            <!-- Your logo -->
+  			    <img src="{% static './img/logo.png' %}" alt="" class="main-logo" />
+            <div class="h-content">
+                <h1 style="text-transform: capitalize;">Hello, {{user}}!</h1>
+                <h2> Dreambuy is Coming Soon...</h2>
+              <p>A place where you can win your dream product for just Rs.499 or you will get a Amazon cashback</p>
+                <p><u>Recent winners</u></p>
 
 
-    <th><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/247210_10151814298542080_1935273908_n.jpg?oh=f0f6eb6d2cb6cffe6edd516b1ff7eb9d&oe=5A719E35" alt="This is my work"  height=auto width=auto /> <h6>Dharani</h6></th>
-    <th><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/10418257_1226924060669965_3445495416831173480_n.jpg?oh=a499955694760094f74a00aa2f7a79a8&oe=5A77A6D8" alt="This is my work" height=auto width=auto /><h6>Jalpal Nagaraju</h6></th>
-    <th><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/21430564_1958804307723102_247021017269636175_n.jpg?oh=72707f3d39d5c7edad9d9394810f3a82&oe=5A7DDE0B" alt="This is my work" height=auto width=auto /><h6>Priya</h6></th>
-    <th><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/11947608_886266431468072_7622884474998962237_n.jpg?oh=676e885265dc28f3ae9e91aa4ca0bf3d&oe=5A774A59" alt="This is my work" height=auto width=auto /><h6>Kirshna</h6></th>
-      <th><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20622258_1809150545765198_4818778157651502827_n.jpg?oh=3a6fd136028f272fa3ccc74a70eef722&oe=5AA5B001" alt="This is my work" height=auto width=auto /><h6>Harsha</h6></th>
-  </tr>
 
-    </table>
-</div>
+
+              <ul class="gallery project_navigation">
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/247210_10151814298542080_1935273908_n.jpg?oh=f0f6eb6d2cb6cffe6edd516b1ff7eb9d&oe=5A719E35" alt="This is my work" class="img-responsive" />
+              <h6>Dharani</h6>
+              </figure>
+                </li>
+
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/10418257_1226924060669965_3445495416831173480_n.jpg?oh=a499955694760094f74a00aa2f7a79a8&oe=5A77A6D8" alt="This is my work" class="img-responsive" />
+              <h6>Jalpal Nagaraju</h6>
+              </figure>
+                </li>
+
+
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/21430564_1958804307723102_247021017269636175_n.jpg?oh=72707f3d39d5c7edad9d9394810f3a82&oe=5A7DDE0B" alt="This is my work" class="img-responsive" />
+              <h6>Lakshmi Priya</h6>
+              </figure>
+                </li>
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t31.0-8/13767361_1178951228832364_1888359473569694397_o.jpg?oh=02ffb9febfef5c2fb57d0163e812466e&oe=5AB01154" alt="This is my work" class="img-responsive" />
+              <h6>Roshith Michael</h6>
+              </figure>
+                </li>
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/11156409_797967833632917_6806415243297151378_n.jpg?oh=26e7a7c7c4a4d72079d8dd5364465484&oe=5A7B1069" alt="This is my work" class="img-responsive" />
+              <h6>Preethi Raja</h6>
+              </figure>
+              </li>
+              </ul>
+<ul class="gallery project_navigation">
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/12717678_978670305536151_7086901664060040192_n.jpg?oh=fc254d8550fd06dfccde47eafe3ce2db&oe=5A839043" alt="This is my work" class="img-responsive" />
+              <h6>Jagadeesh Waran K</h6>
+              </figure>
+                </li>
+
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/11947608_886266431468072_7622884474998962237_n.jpg?oh=676e885265dc28f3ae9e91aa4ca0bf3d&oe=5A774A59" alt="This is my work" class="img-responsive" />
+              <h6>Krishna Kumar Nukala</h6>
+              </figure>
+                </li>
+
+
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/19598748_772709039565691_6264621182577632829_n.jpg?oh=7c0fd1b0b35c01c895392bf2fa69296e&oe=5A7171BA" alt="This is my work" class="img-responsive" />
+              <h6>sai kumar ragala</h6>
+              </figure>
+                </li>
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/22310462_1627927810607574_619358076278368587_n.jpg?oh=b4395bc52e8904d817c6a9f2ae480556&oe=5A685D7E" alt="This is my work" class="img-responsive" />
+              <h6>Bharath Munakala</h6>
+              </figure>
+                </li>
+
+              <li class="item col-sm-2 col-xs-12">
+              <figure>
+              <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/13051676_1326363707377220_2990131769512993148_n.jpg?oh=99cf50a68f89a4ed4a849ccc8ffccbda&oe=5A7FDA13" alt="This is my work" class="img-responsive" />
+              <h6>Harsha Vardhan reddy kumbhagiri</h6>
+              </figure>
+              </li>
+
+
+
+              </ul>
+
+            </div>
             <ul class="social_icons">
 
               <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
@@ -108,11 +180,7 @@
 <!-- Your picture -->
 
 {% ifequal item.Product_bids item.Product_MAX_bid %}
-    <h4><strong><u>{{ item.Product_name }}</u> <font color="red">Sold off</font></strong></h4>
-{% else %}
-    <h4><u><strong>{{ item.Product_name }}</strong></u><small> <font color="Green">({{ item.Product_bids }} Sold)</font> </small></h4>
-{% endifequal %}
-
+    <h4><strong><u>{{ item.Product_name }}</u> <font color="Green">Ready for Lucky draw</font></strong></h4>
 <img src="{{ item.Product_image }}" alt="This is my work" class="img-responsive" />
 <!-- Picture's description below this one -->
 <figcaption class="caption">
@@ -121,11 +189,7 @@
     <h6>Coupon Price: &#8377;{{item.Product_each_bid_cost}} ({{ item.Product_bids }} sold of {{item.Product_MAX_bid}} Coupons)</h6>
 </div>
 
-{% ifequal item.Product_bids item.Product_MAX_bid %}
-    <input class="w3-button w3-red" style="float: right;"  role="button" onclick='overlay()' type="submit" value="Sold off">
-{% else %}
-    <button  style="float:right; " class="w3-button w3-deep-purple"  data-toggle="modal" data-target="#{{item.Product_id}}">Wish Now</button>
-{% endifequal %}
+    <button  style="float:right; " class="w3-button w3-deep-purple"  data-toggle="modal" data-target="#{{item.Product_id}}">Take draw</button>
 
 </figcaption>
 </figure>
@@ -133,6 +197,13 @@
 On purchase of this coupon you may win {{ item.Product_name }} or will get a cash back of &#8377; 1000
 </p>
 </li>
+
+
+
+    {% else %}
+    <h4><u><strong>No Products</strong></h4>
+{% endifequal %}
+
 
 
 
@@ -259,13 +330,13 @@ On purchase of this coupon you may win {{ item.Product_name }} or will get a cas
 </div>
 </section>
 <script>
-	  
+
 	  var offset = 300,
 	//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
 	offset_opacity = 1200,
 	//duration of the top scrolling animation (in ms)
 	scroll_top_duration = 700;
-	  
+
 	  </script>
       <script src="{% static './js/jquery-1.11.3.min.js' %}"></script>
       <script src="{% static './js/bootstrap.min.js' %}"></script>
@@ -322,7 +393,7 @@ table {
 }
 
 td, th {
-
+    border: 1px solid #e2dcf3;
     text-align: left;
     padding: 8px;
 }

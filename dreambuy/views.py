@@ -94,8 +94,8 @@ def detail(request, prdt_id):
     return render(request, 'dreambuy/details.html', {'prdt': prdt})
 
 def updateMAX_bid ():
-    from . import tests
-    idslist = tests.select_task_by_priority()
+    from . import percentquery
+    idslist = percentquery.select_task_by_priority()
     for prdt_id in idslist.keys():
         # print(prdt_id)
         try:
@@ -106,8 +106,8 @@ def updateMAX_bid ():
             print(e)
 
 def updaterank ():
-    from . import tests
-    idslist = tests.select_task_by_priority()
+    from . import percentquery
+    idslist = percentquery.select_task_by_priority()
     for prdt_id in idslist.keys():
         print(prdt_id)
         try:
