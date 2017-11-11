@@ -143,16 +143,13 @@ def place_bid(request, prdt_id):
                 #                         purpose=purpose)
                 # cur_prdt.save()
                 amt = int(cur_palced)* cur_prdt_bid_price
-<<<<<<< HEAD
                 purpose = str(prdt_id)+' ('+str(cur_palced)+")"
                 # rurl = 'http://127.0.0.1:8000/dreambuy/pymnt/'
                 rurl = 'http://dealscouponscashback.com/dreambuy/pymnt/'
                 response = mk_pymt(amt=amt, purpose=purpose, usr=user.username, mblnum='', mlid='', rurl=rurl)
-=======
                 purpose = str(prdt_id)+'_'+str(cur_palced)+'_'+str(cur_prdt_bid_price)
                 rurl = 'http://dealscouponscashback.com/dreambuy/pymnt/'
                 response = mk_pymt(amt=10, purpose=purpose, usr=user.username, mblnum='', mlid='', rurl=rurl)
->>>>>>> 2f05366afe96c203de1b83d542e18c51a992c1b8
                 print ("response",response)
                 pymntpth = response['payment_request']['longurl']
                 print ("pymntpth",pymntpth)
