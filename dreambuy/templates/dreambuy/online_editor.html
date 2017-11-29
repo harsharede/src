@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form  role="form" action="{% url 'dreambuy:online_editor_result'%}" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<textarea class="span6" rows="50" cols="250" name="online_editor"  required  onchange="this.form.submit()">{{cd}}</textarea>
+
+
+<button class="btn btn-lg btn-primary btn-block"  name="submit" value="Login" type="Submit">run code</button>
+<br>
+</form>
+
+
+<p>{{rslt}}</p>
+
+
+</body>
+</html>

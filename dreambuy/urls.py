@@ -10,6 +10,9 @@ urlpatterns = [
     #/dreambuy/
     url(r'^$',views.index, name='index'),
     url(r'^register/$', views.register, name='register'),
+
+    url(r'^online_editor/$', views.online_editor, name='online_editor'),
+    url(r'^online_editor_result/$', views.online_editor_result, name='online_editor_result'),
     url(r'^login_user/$', views.login_user, name='login_user'),
     url(r'^logout_user/$', views.logout_user, name='logout_user'),
     # #/dreambuy/id/

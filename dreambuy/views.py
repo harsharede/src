@@ -219,6 +219,44 @@ def login_user(request):
             return render(request, 'dreambuy/login.html', {'error_message': 'Invalid login'})
     return render(request, 'dreambuy/login.html', )
 
+
+def online_editor(request):
+    return render(request, 'dreambuy/online_editor.html', )
+
+def online_editor_result(request):
+    if request.method == "POST":
+        online_editor = request.POST['online_editor']
+        print (online_editor)
+        f = open("online_editor_run.py", "w+")
+        f.write(online_editor)
+        f.close()
+        import subprocess
+        result = subprocess.run(['python', 'online_editor_run.py'], stdout=subprocess.PIPE)
+        rslt = result.stdout
+        context = {'cd': online_editor, 'rslt':rslt}
+        # context = {'cd': online_editor}
+        return render(request, 'dreambuy/online_editor.html', context=context)
+    return render(request, 'dreambuy/online_editor.html')
+
+
+# def online_editor_result(request):
+#     if request.method == "POST":
+#         online_editor = request.POST['online_editor']
+#         print (online_editor)
+#         f = open("online_editor_run.py", "w+")
+#         f.write(online_editor)
+#         f.close()
+#         # import subprocess
+#         # result = subprocess.run(['python', 'online_editor_run.py'], stdout=subprocess.PIPE)
+#         # rslt = result.stdout
+#         # print (rslt[0].split('\n'))
+#         # context = {'cd': online_editor, 'rslt':rslt}
+#         context = {'cd': online_editor}
+#         return render(request, 'dreambuy/online_editor.html', context=context)
+#
+#     return render(request, 'dreambuy/online_editor.html')
+
+
 def logout_user(request):
     logout(request)
     form = UserForm(request.POST or None)

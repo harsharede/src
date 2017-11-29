@@ -23,8 +23,6 @@
       <!--  Resources style ================== -->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link href="{% static './css/theme-FuchiStudio.css' %}" rel="stylesheet" type="text/css" media="all"/>
-		
-
 
 	  </head>
     <body>
@@ -44,13 +42,11 @@
   </div>
 </div>
 </li>
+
 <strong>
 <li><a href="#home">Home</a></li>
 <li><a href="#contact">Winners</a></li>
 
-<div class='widget-content'>
-<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="oneecoms-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_box";amzn_assoc_width ="320"; amzn_assoc_height ="50"; amzn_assoc_default_search_category =""; amzn_assoc_theme ="dark"; amzn_assoc_bg_color ="000000"; </script><script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
-</div>
 
 <li style="visibility: hidden;">.</li>
 </strong>
@@ -61,13 +57,25 @@
 <div id="leftSide" class="gradient">
 <div id="home" >
 <!-- Your logo -->
+
+
+
 <img src="{% static './img/logo.png' %}" alt="" class="main-logo" />
+
 <div class="h-content">
 
-<h1> DCC is Coming Soon...</h1>
+<h1>DCC is Coming Soon...</h1>
 
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<form action="http://amzn.to/2iXfTYi" method="GET">
 
-<p>A place where you can win your dream product for just Rs.499 or you will get a Amazon cashback</p>
+<button type="submit" class="btn btn-default btn-block w3-left-align">
+    <i class="material-icons"  style="font-size:30px;color:purple;">search</i> Search for products and more.
+</button>
+
+</form>
+
+<p>  Get up to 10% cashback on every product you buy*</p>
 <h2 style="text-transform: capitalize;">Hello, {{user}}!</h2>
 
 
@@ -85,6 +93,7 @@
   </tr>
 
     </table>
+
 </div>
             <ul class="social_icons">
 
@@ -132,10 +141,11 @@
 {% endifequal %}
 
 </figcaption>
-</figure>
+
 <p>
 On purchase of this coupon you may win {{ item.Product_name }} or will get a cash back of &#8377; 1000
 </p>
+    </figure>
 </li>
 
 
@@ -507,6 +517,8 @@ margin:  auto;
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+
 
 </style>
 
