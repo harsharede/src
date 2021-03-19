@@ -3,7 +3,7 @@ chardet==3.0.4
 Django==1.9
 django-filter==1.0.4
 django-tastypie==0.14.0
-djangorestframework==3.6.4
+djangorestframework==3.11.2
 idna==2.6
 instamojo-wrapper==1.1
 Markdown==2.6.9
